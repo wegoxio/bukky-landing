@@ -1,0 +1,310 @@
+{
+  "seo": {
+    "title": "Book appointments and run your business in one place",
+    "description": "SaaS software to schedule appointments, manage staff and services, track analytics, and share fast booking links.",
+    "keywords": [
+      "appointment scheduling software",
+      "online booking system",
+      "staff management software",
+      "service management platform",
+      "business analytics dashboard",
+      "booking link",
+      "reservation software",
+      "saas booking platform"
+    ]
+  },
+  "home": {
+    "badge": "Now in public beta",
+    "title": "Manage appointments, clients, and operations in one place",
+    "description": "Bukky helps service businesses manage bookings, clients, and daily operations from a modern, fast, and easy-to-use platform.",
+    "primaryCta": "Request demo",
+    "secondaryCta": "View platform",
+    "trustLabel": "Trusted by 2,500+ teams",
+    "highlights": {
+      "items": [
+        {
+          "title": "24/7",
+          "subtitle": "Bookings available"
+        },
+        {
+          "title": "1 Platform",
+          "subtitle": "Centralized Management"
+        },
+        {
+          "title": "Less Time",
+          "subtitle": "Coordinating Appointments"
+        }
+      ],
+      "eyebrow": "DESIGNED FOR MODERN BUSINESSES",
+      "statement": "Ideal for professionals and teams that run daily bookings and schedules."
+    },
+    "dashboard": {
+      "title": "Dashboard",
+      "activeWorkflows": "Active workflows",
+      "executions": "Executions",
+      "successRate": "Success rate"
+    }
+  },
+  "navbar": {
+    "features": "Features",
+    "integrations": "Integrations",
+    "customers": "Customers",
+    "pricing": "Pricing",
+    "signIn": "Sign in",
+    "getStarted": "Get started",
+    "langEs": "ES",
+    "langEn": "EN"
+  },
+  "features": {
+    "eyebrow": "FEATURES",
+    "title": "Everything you need to run your daily operations",
+    "description": "Tools designed to simplify management for businesses based on appointments and reservations.",
+    "items": [
+      {
+        "title": "Appointment management",
+        "description": "Organize bookings and availability from a single platform."
+      },
+      {
+        "title": "Client management",
+        "description": "Keep your clients information and activity well organized."
+      },
+      {
+        "title": "Smart calendar",
+        "description": "See real schedules and avoid conflicts or overlaps."
+      },
+      {
+        "title": "Admin dashboard",
+        "description": "Control services, schedules, and staff from one central dashboard."
+      },
+      {
+        "title": "Automated reminders",
+        "description": "Reduce no-shows and improve the experience with automatic notifications."
+      },
+      {
+        "title": "Reports and metrics",
+        "description": "Track activity, bookings, and your operation performance."
+      }
+    ]
+  },
+  "quickSetup": {
+    "eyebrow": "GET STARTED IN MINUTES",
+    "title": "Set up your operation and start receiving bookings quickly.",
+    "learnMore": "Learn more",
+    "steps": [
+      {
+        "title": "Set up your business",
+        "description": "Create services, schedules, and availability for your operation."
+      },
+      {
+        "title": "Share your booking link",
+        "description": "Your clients can book from a personalized page."
+      },
+      {
+        "title": "Manage your calendar",
+        "description": "Centralize bookings, confirmations, and activity in one place."
+      }
+    ]
+  },
+  "operationsWorkflow": {
+    "title": "Designed for real operations",
+    "description": "This is the booking flow in plain terms: clients book, we validate available times, and confirmations are sent automatically.",
+    "windowTitle": "Booking flow",
+    "trigger": {
+      "label": "Start",
+      "title": "Client books from your page",
+      "url": "Available through your booking link",
+      "status": "Online",
+      "icon": "public-booking"
+    },
+    "actions": [
+      {
+        "label": "Step 1",
+        "title": "We show available time slots",
+        "subtitle": "Based on your services, team, and schedules",
+        "latency": "Updated instantly",
+        "icon": "availability"
+      },
+      {
+        "label": "Step 2",
+        "title": "We confirm and remind each booking",
+        "subtitle": "Confirmation email and automated reminders",
+        "latency": "Automatic follow-up",
+        "icon": "reminder"
+      }
+    ],
+    "stats": {
+      "title": "Operation at work",
+      "totalRunsLabel": "Active processes",
+      "totalRunsValue": "58",
+      "successRateLabel": "Available modules",
+      "successRateValue": "12"
+    },
+    "recent": {
+      "title": "What you already have",
+      "items": [
+        {
+          "time": "Online booking from your page",
+          "status": "ready",
+          "tone": "success"
+        },
+        {
+          "time": "Schedule and block management",
+          "status": "ready",
+          "tone": "success"
+        },
+        {
+          "time": "Automated email reminders",
+          "status": "ready",
+          "tone": "success"
+        },
+        {
+          "time": "Integrated online payments",
+          "status": "pending",
+          "tone": "warning"
+        }
+      ]
+    }
+  },
+  "testimonials": {
+    "eyebrow": "TESTIMONIALS",
+    "title": "Loved by modern teams",
+    "items": [
+      {
+        "quote": "Appointment management went from being manual and chaotic to something much simpler and professional.",
+        "name": "Mariana Rodriguez",
+        "role": "Psychologist",
+        "avatarTone": "purple",
+        "rating": 5
+      },
+      {
+        "quote": "I now have better control of my availability and far less time wasted coordinating schedules.",
+        "name": "Carlos Taraschi",
+        "role": "Psychologist",
+        "avatarTone": "yellow",
+        "rating": 5
+      },
+      {
+        "quote": "The experience for our clients improved dramatically since we started using Bukky.",
+        "name": "Vicente Signorile",
+        "role": "Hospital Universitario de Caracas",
+        "avatarTone": "gradient",
+        "rating": 5
+      }
+    ]
+  },
+  "finalCta": {
+    "title": "Modernize how you run your business",
+    "description": "Centralize appointments, clients, and operations from one simple and modern platform.",
+    "primaryCta": "Request demo",
+    "secondaryCta": "Contact",
+    "note": "Modern operations platform for service businesses."
+  },
+  "footer": {
+    "description": "Bukky is a modern platform for businesses that manage appointments, clients, and daily operations.",
+    "socialLinks": [
+      {
+        "label": "Instagram",
+        "href": "https://instagram.com",
+        "icon": "instagram"
+      },
+      {
+        "label": "GitHub",
+        "href": "https://github.com",
+        "icon": "github"
+      },
+      {
+        "label": "LinkedIn",
+        "href": "https://linkedin.com",
+        "icon": "linkedin"
+      }
+    ],
+    "columns": [
+      {
+        "title": "Product",
+        "links": [
+          {
+            "label": "Features",
+            "href": "/en#features"
+          },
+          {
+            "label": "Online booking",
+            "href": "/en#integrations"
+          },
+          {
+            "label": "Calendar management",
+            "href": "/en#customers"
+          },
+          {
+            "label": "Dashboard",
+            "href": "/en#pricing"
+          },
+          {
+            "label": "Request demo",
+            "href": "/en#get-started"
+          }
+        ]
+      },
+      {
+        "title": "Solutions",
+        "links": [
+          {
+            "label": "Clinics",
+            "href": "/en#integrations"
+          },
+          {
+            "label": "Psychologists",
+            "href": "/en#integrations"
+          },
+          {
+            "label": "Physiotherapists",
+            "href": "/en#integrations"
+          },
+          {
+            "label": "Salons",
+            "href": "/en#integrations"
+          },
+          {
+            "label": "Wellness",
+            "href": "/en#integrations"
+          }
+        ]
+      },
+      {
+        "title": "Contact",
+        "links": [
+          {
+            "label": "WhatsApp",
+            "href": "https://wa.me/",
+            "icon": "whatsapp"
+          },
+          {
+            "label": "Email",
+            "href": "mailto:hello@bukky.app",
+            "icon": "email"
+          },
+          {
+            "label": "Instagram",
+            "href": "https://instagram.com",
+            "icon": "instagram"
+          }
+        ]
+      }
+    ],
+    "legalLinks": [
+      {
+        "label": "Privacy",
+        "href": "/en#privacy"
+      },
+      {
+        "label": "Terms",
+        "href": "/en#terms"
+      }
+    ],
+    "copyright": "\u00A9 2026 Bukky. All rights reserved.",
+    "tagline": "Designed for modern service businesses."
+  },
+  "navigation": {
+    "spanish": "Spanish",
+    "english": "English"
+  }
+}

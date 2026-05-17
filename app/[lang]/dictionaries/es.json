@@ -1,0 +1,310 @@
+{
+  "seo": {
+    "title": "Agenda citas y gestiona tu negocio en un solo lugar",
+    "description": "Software SaaS para agendar citas, gestionar personal y servicios, analizar estadisticas y compartir links de reserva rapidos.",
+    "keywords": [
+      "software de citas",
+      "agenda de citas online",
+      "gestion de personal",
+      "gestion de servicios",
+      "estadisticas de negocio",
+      "link de reserva",
+      "sistema de reservas",
+      "saas para citas"
+    ]
+  },
+  "home": {
+    "badge": "Now in public beta",
+    "title": "Gestiona citas, clientes y operaciones desde un solo lugar",
+    "description": "Bukky ayuda a negocios de servicios a gestionar reservas, clientes y operaciones diarias desde una plataforma moderna, r\u00e1pida y f\u00e1cil de usar.",
+    "primaryCta": "Solicitar demo",
+    "secondaryCta": "Ver plataforma",
+    "trustLabel": "Con la confianza de 2,500+ equipos",
+    "highlights": {
+      "items": [
+        {
+          "title": "24/7",
+          "subtitle": "Reservas disponibles"
+        },
+        {
+          "title": "1 Plataforma",
+          "subtitle": "Gesti\u00f3n Centralizada"
+        },
+        {
+          "title": "Menos Tiempo",
+          "subtitle": "Coordinando Citas"
+        }
+      ],
+      "eyebrow": "DISE\u00d1ADO PARA NEGOCIOS MODERNOS",
+      "statement": "Ideal para profesionales y equipos que trabajan con reservas y agendas diarias."
+    },
+    "dashboard": {
+      "title": "Panel",
+      "activeWorkflows": "Flujos activos",
+      "executions": "Ejecuciones",
+      "successRate": "Tasa de \u00e9xito"
+    }
+  },
+  "navbar": {
+    "features": "Funciones",
+    "integrations": "Integraciones",
+    "customers": "Clientes",
+    "pricing": "Precios",
+    "signIn": "Iniciar sesi\u00f3n",
+    "getStarted": "Comenzar",
+    "langEs": "ES",
+    "langEn": "EN"
+  },
+  "features": {
+    "eyebrow": "FEATURES",
+    "title": "Todo lo que necesitas para gestionar tu operación diaria",
+    "description": "Herramientas diseñadas para simplificar la gestión de negocios basados en citas y reservas.",
+    "items": [
+      {
+        "title": "Gestión de citas",
+        "description": "Organiza reservas y disponibilidad desde una sola plataforma."
+      },
+      {
+        "title": "Gestión de clientes",
+        "description": "Mantén organizada la información y actividad de tus clientes."
+      },
+      {
+        "title": "Agenda inteligente",
+        "description": "Visualiza horarios reales y evita conflictos o solapamientos."
+      },
+      {
+        "title": "Panel administrativo",
+        "description": "Controla servicios, horarios y personal desde un dashboard centralizado."
+      },
+      {
+        "title": "Recordatorios automáticos",
+        "description": "Reduce ausencias y mejora la experiencia con notificaciones automáticas."
+      },
+      {
+        "title": "Reportes y métricas",
+        "description": "Visualiza actividad, reservas y rendimiento de tu operación."
+      }
+    ]
+  },
+  "quickSetup": {
+    "eyebrow": "EMPIEZA EN MINUTOS",
+    "title": "Configura tu operación y comienza a recibir reservas rápidamente.",
+    "learnMore": "Conocer más",
+    "steps": [
+      {
+        "title": "Configura tu negocio",
+        "description": "Crea servicios, horarios y disponibilidad según tu operación."
+      },
+      {
+        "title": "Comparte tu enlace",
+        "description": "Tus clientes podrán reservar desde una página personalizada."
+      },
+      {
+        "title": "Gestiona tu agenda",
+        "description": "Centraliza reservas, confirmaciones y actividad desde un solo lugar."
+      }
+    ]
+  },
+  "operationsWorkflow": {
+    "title": "Dise\u00f1ado para operaciones reales",
+    "description": "Asi funciona una reserva de forma simple: el cliente agenda, validamos horarios disponibles y enviamos confirmaciones automaticas.",
+    "windowTitle": "Flujo de reservas",
+    "trigger": {
+      "label": "Inicio",
+      "title": "Cliente agenda desde tu pagina",
+      "url": "Disponible en tu enlace de reservas",
+      "status": "En linea",
+      "icon": "public-booking"
+    },
+    "actions": [
+      {
+        "label": "Paso 1",
+        "title": "Mostramos horarios disponibles",
+        "subtitle": "Segun servicios, personal y horarios configurados",
+        "latency": "Actualizado al instante",
+        "icon": "availability"
+      },
+      {
+        "label": "Paso 2",
+        "title": "Confirmamos y recordamos la cita",
+        "subtitle": "Email de confirmacion y recordatorios automaticos",
+        "latency": "Seguimiento automatico",
+        "icon": "reminder"
+      }
+    ],
+    "stats": {
+      "title": "Operacion en marcha",
+      "totalRunsLabel": "Procesos activos",
+      "totalRunsValue": "58",
+      "successRateLabel": "Modulos disponibles",
+      "successRateValue": "12"
+    },
+    "recent": {
+      "title": "Lo que ya tienes hoy",
+      "items": [
+        {
+          "time": "Reserva online desde tu pagina",
+          "status": "listo",
+          "tone": "success"
+        },
+        {
+          "time": "Gestion de agenda y bloqueos",
+          "status": "listo",
+          "tone": "success"
+        },
+        {
+          "time": "Recordatorios por email automaticos",
+          "status": "listo",
+          "tone": "success"
+        },
+        {
+          "time": "Pagos online integrados",
+          "status": "proximo",
+          "tone": "warning"
+        }
+      ]
+    }
+  },
+  "testimonials": {
+    "eyebrow": "TESTIMONIALES",
+    "title": "Confiado por equipos modernos",
+    "items": [
+      {
+        "quote": "La gestion de citas paso de ser un proceso manual y desordenado a algo mucho mas simple y profesional.",
+        "name": "Mariana Rodriguez",
+        "role": "Psicologa",
+        "avatarTone": "purple",
+        "rating": 5
+      },
+      {
+        "quote": "Ahora tengo mejor control de mi disponibilidad y menos tiempo perdido coordinando horarios.",
+        "name": "Carlos Taraschi",
+        "role": "Psicologo",
+        "avatarTone": "yellow",
+        "rating": 5
+      },
+      {
+        "quote": "La experiencia para nuestros clientes mejoro muchisimo desde que empezamos a usar Bukky.",
+        "name": "Vicente Signorile",
+        "role": "Hospital Universitario de Caracas",
+        "avatarTone": "gradient",
+        "rating": 5
+      }
+    ]
+  },
+  "finalCta": {
+    "title": "Moderniza la gestion de tu negocio",
+    "description": "Centraliza citas, clientes y operaciones desde una plataforma simple y moderna.",
+    "primaryCta": "Solicitar demo",
+    "secondaryCta": "Contacto",
+    "note": "Plataforma moderna de gestion para negocios de servicios."
+  },
+  "footer": {
+    "description": "Bukky es una plataforma moderna para negocios que gestionan citas, clientes y operaciones diarias.",
+    "socialLinks": [
+      {
+        "label": "Instagram",
+        "href": "https://instagram.com",
+        "icon": "instagram"
+      },
+      {
+        "label": "GitHub",
+        "href": "https://github.com",
+        "icon": "github"
+      },
+      {
+        "label": "LinkedIn",
+        "href": "https://linkedin.com",
+        "icon": "linkedin"
+      }
+    ],
+    "columns": [
+      {
+        "title": "Producto",
+        "links": [
+          {
+            "label": "Funcionalidades",
+            "href": "/es#features"
+          },
+          {
+            "label": "Reservas online",
+            "href": "/es#integrations"
+          },
+          {
+            "label": "Gestion de agenda",
+            "href": "/es#customers"
+          },
+          {
+            "label": "Dashboard",
+            "href": "/es#pricing"
+          },
+          {
+            "label": "Solicitar demo",
+            "href": "/es#get-started"
+          }
+        ]
+      },
+      {
+        "title": "Soluciones",
+        "links": [
+          {
+            "label": "Clinicas",
+            "href": "/es#integrations"
+          },
+          {
+            "label": "Psicologos",
+            "href": "/es#integrations"
+          },
+          {
+            "label": "Fisioterapeutas",
+            "href": "/es#integrations"
+          },
+          {
+            "label": "Peluquerias",
+            "href": "/es#integrations"
+          },
+          {
+            "label": "Wellness",
+            "href": "/es#integrations"
+          }
+        ]
+      },
+      {
+        "title": "Contacto",
+        "links": [
+          {
+            "label": "WhatsApp",
+            "href": "https://wa.me/",
+            "icon": "whatsapp"
+          },
+          {
+            "label": "Email",
+            "href": "mailto:hola@bukky.app",
+            "icon": "email"
+          },
+          {
+            "label": "Instagram",
+            "href": "https://instagram.com",
+            "icon": "instagram"
+          }
+        ]
+      }
+    ],
+    "legalLinks": [
+      {
+        "label": "Privacidad",
+        "href": "/es#privacy"
+      },
+      {
+        "label": "Terminos",
+        "href": "/es#terms"
+      }
+    ],
+    "copyright": "\u00A9 2026 Bukky. Todos los derechos reservados.",
+    "tagline": "Disenado para negocios modernos."
+  },
+  "navigation": {
+    "spanish": "Espa\u00f1ol",
+    "english": "Ingl\u00e9s"
+  }
+}
