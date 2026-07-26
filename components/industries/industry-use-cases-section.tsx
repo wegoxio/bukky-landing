@@ -7,7 +7,6 @@ export type IndustryUseCasesLabels = {
   items: Array<{
     title: string;
     description: string;
-    focus: string;
     icon: string;
   }>;
 };
@@ -87,13 +86,11 @@ export function IndustryUseCasesSection({
           </p>
         </div>
 
-        <div className="mt-9 grid gap-4 md:grid-cols-2 lg:grid-cols-5">
-          {labels.items.map((item, index) => (
+        <div className="mt-9 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {labels.items.map((item) => (
             <MouseGlowArticle
               key={item.title}
-              className={`feature-card group rounded-[18px] border border-white/10 bg-[linear-gradient(145deg,rgba(255,255,255,0.036)_0%,rgba(255,255,255,0.016)_100%)] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] transition-[transform,border-color,box-shadow] duration-500 hover:border-white/20 hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.08),0_20px_52px_rgba(0,0,0,0.3)] sm:p-6 ${
-                index < 2 ? "lg:col-span-2" : ""
-              }`}
+              className="feature-card group rounded-[18px] border border-white/10 bg-[linear-gradient(145deg,rgba(255,255,255,0.036)_0%,rgba(255,255,255,0.016)_100%)] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] transition-[transform,border-color,box-shadow] duration-500 hover:border-white/20 hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.08),0_20px_52px_rgba(0,0,0,0.3)] sm:p-6"
             >
               <span className="feature-icon inline-flex h-11 w-11 items-center justify-center rounded-xl bg-[linear-gradient(135deg,#9759EF_0%,#FFE633_100%)] text-[#171717] shadow-[0_14px_26px_rgba(0,0,0,0.28)]">
                 <IndustryIcon name={item.icon} />
@@ -103,9 +100,6 @@ export function IndustryUseCasesSection({
               </h3>
               <p className="mt-3 text-[15px] leading-relaxed text-white/56">
                 {item.description}
-              </p>
-              <p className="mt-5 rounded-full border border-[#FFE633]/18 bg-[#FFE633]/8 px-3 py-1.5 text-xs font-medium leading-relaxed text-[#FFE633]/88">
-                {item.focus}
               </p>
             </MouseGlowArticle>
           ))}
