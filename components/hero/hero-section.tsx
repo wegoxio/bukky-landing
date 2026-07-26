@@ -2,11 +2,11 @@ import Image from "next/image";
 
 import { ActionButton } from "@/components/ui/action-button";
 import type { Locale } from "@/lib/i18n";
+import { getLocalizedRoute } from "@/lib/routes";
 
 import { HeroDashboardCard } from "./hero-dashboard-card";
 
 type HeroLabels = {
-  badge: string;
   title: string;
   description: string;
   primaryCta: string;
@@ -42,10 +42,6 @@ export function HeroSection({ lang, labels }: HeroSectionProps) {
 
       <div className="relative mx-auto grid w-full max-w-[1120px] items-center gap-10 px-5 sm:gap-12 sm:px-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,505px)] lg:gap-10">
         <div className="max-w-[560px]">
-          <div className="hero-enter hero-enter-delay-1 inline-flex items-center gap-2 rounded-full border border-white/14 bg-[rgba(255,255,255,0.02)] px-3.5 py-1.5 text-[11px] tracking-[0.02em] text-white/65 sm:px-4 sm:py-2 sm:text-xs">
-            <span className="h-2 w-2 rounded-full bg-[#FFE633]" />
-            <span>{labels.badge}</span>
-          </div>
 
           <h1 className="hero-enter hero-enter-delay-2 mt-6 text-[36px] font-semibold leading-[1.1] tracking-tight text-white sm:mt-7 sm:text-[48px] lg:text-[61px]">
             {labels.title}
@@ -57,12 +53,12 @@ export function HeroSection({ lang, labels }: HeroSectionProps) {
 
           <div className="hero-enter hero-enter-delay-4 mt-8 grid grid-cols-1 gap-3 sm:flex sm:flex-wrap sm:items-center sm:gap-4">
             <ActionButton
-              href={`/${lang}#get-started`}
+              href={getLocalizedRoute(lang, "contact")}
               label={labels.primaryCta}
               variant="primary"
             />
             <ActionButton
-              href={`/${lang}#features`}
+              href={getLocalizedRoute(lang, "features")}
               label={labels.secondaryCta}
               variant="secondary"
             />

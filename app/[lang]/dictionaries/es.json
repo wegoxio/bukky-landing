@@ -1,7 +1,7 @@
 {
   "seo": {
     "title": "Agenda citas y gestiona tu negocio en un solo lugar",
-    "description": "Software SaaS para agendar citas, gestionar personal y servicios, analizar estadisticas y compartir links de reserva rapidos.",
+    "description": "Software SaaS para agendar citas online, gestionar clientes, personal, servicios, recordatorios y operaciones diarias en psicología, barberías, clínicas y negocios de servicios.",
     "keywords": [
       "software de citas",
       "agenda de citas online",
@@ -10,13 +10,17 @@
       "estadisticas de negocio",
       "link de reserva",
       "sistema de reservas",
-      "saas para citas"
+      "saas para citas",
+      "software para psicólogos",
+      "software para barberías",
+      "agenda online para clínicas",
+      "reservas para negocios de servicios"
     ]
   },
   "home": {
     "badge": "Now in public beta",
     "title": "Gestiona citas, clientes y operaciones desde un solo lugar",
-    "description": "Bukky ayuda a negocios de servicios a gestionar reservas, clientes y operaciones diarias desde una plataforma moderna, r\u00e1pida y f\u00e1cil de usar.",
+    "description": "Bukky ayuda a psicólogos, barberías, clínicas, centros de belleza y negocios de servicios a gestionar reservas, clientes, recordatorios y operaciones diarias desde una plataforma moderna, rápida y fácil de usar.",
     "primaryCta": "Solicitar demo",
     "secondaryCta": "Ver plataforma",
     "trustLabel": "Con la confianza de 2,500+ equipos",
@@ -47,16 +51,20 @@
   },
   "navbar": {
     "features": "Funciones",
-    "integrations": "Integraciones",
     "customers": "Clientes",
     "pricing": "Precios",
+    "contact": "Contacto",
     "signIn": "Iniciar sesi\u00f3n",
-    "getStarted": "Comenzar",
+    "getStarted": "Solicitar demo",
     "langEs": "ES",
-    "langEn": "EN"
+    "langEn": "EN",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "switchToSpanish": "Cambiar idioma a español",
+    "switchToEnglish": "Cambiar idioma a inglés"
   },
   "features": {
-    "eyebrow": "FEATURES",
+    "eyebrow": "FUNCIONES",
     "title": "Todo lo que necesitas para gestionar tu operación diaria",
     "description": "Herramientas diseñadas para simplificar la gestión de negocios basados en citas y reservas.",
     "items": [
@@ -86,6 +94,43 @@
       }
     ]
   },
+  "industries": {
+    "eyebrow": "NEGOCIOS CON CITAS",
+    "title": "Bukky encaja en operaciones donde cada reserva importa.",
+    "description": "La plataforma está pensada para psicólogos, barberías, clínicas, centros de belleza, wellness y otros negocios que dependen de horarios reales, clientes organizados, confirmaciones y recordatorios claros.",
+    "items": [
+      {
+        "title": "Psicología y terapia",
+        "description": "Organiza sesiones individuales, disponibilidad por profesional, datos de contacto del paciente y confirmaciones sin depender de conversaciones dispersas.",
+        "focus": "Agenda confidencial, confirmaciones y menos coordinación manual",
+        "icon": "psychology"
+      },
+      {
+        "title": "Barberías y peluquerías",
+        "description": "Permite que cada cliente elija servicio, barbero y horario disponible mientras el equipo mantiene la agenda actualizada durante el día.",
+        "focus": "Reservas por profesional, servicios con duración y control de turnos",
+        "icon": "barbershop"
+      },
+      {
+        "title": "Clínicas y salud",
+        "description": "Centraliza citas, bloqueos, profesionales y seguimiento operativo para consultas, centros de fisioterapia, estética clínica y servicios sanitarios privados.",
+        "focus": "Agenda centralizada para varios profesionales",
+        "icon": "clinic"
+      },
+      {
+        "title": "Belleza y wellness",
+        "description": "Gestiona tratamientos, reservas recurrentes, disponibilidad y recordatorios para centros de uñas, spas, salones y experiencias de bienestar.",
+        "focus": "Servicios, recordatorios y experiencia de reserva cuidada",
+        "icon": "wellness"
+      },
+      {
+        "title": "Consultorías y servicios",
+        "description": "Coordina reuniones, llamadas, asesorías y sesiones programadas con clientes que necesitan reservar espacios claros en tu calendario.",
+        "focus": "Citas comerciales, sesiones y seguimiento con clientes",
+        "icon": "services"
+      }
+    ]
+  },
   "quickSetup": {
     "eyebrow": "EMPIEZA EN MINUTOS",
     "title": "Configura tu operación y comienza a recibir reservas rápidamente.",
@@ -107,7 +152,7 @@
   },
   "operationsWorkflow": {
     "title": "Dise\u00f1ado para operaciones reales",
-    "description": "Asi funciona una reserva de forma simple: el cliente agenda, validamos horarios disponibles y enviamos confirmaciones automaticas.",
+    "description": "Así funciona una reserva de forma simple: el cliente agenda, validamos horarios disponibles y enviamos confirmaciones automáticas.",
     "windowTitle": "Flujo de reservas",
     "trigger": {
       "label": "Inicio",
@@ -170,102 +215,559 @@
     "title": "Confiado por equipos modernos",
     "items": [
       {
-        "quote": "La gestion de citas paso de ser un proceso manual y desordenado a algo mucho mas simple y profesional.",
+        "quote": "En mi consulta, Bukky me ayuda a ordenar sesiones, confirmar horarios y reducir mensajes de ida y vuelta con cada paciente.",
         "name": "Mariana Rodriguez",
-        "role": "Psicologa",
+        "role": "Psicologa clinica",
+        "avatarSrc": "/avatars/mariana.jpg",
         "avatarTone": "purple",
         "rating": 5
       },
       {
-        "quote": "Ahora tengo mejor control de mi disponibilidad y menos tiempo perdido coordinando horarios.",
-        "name": "Carlos Taraschi",
-        "role": "Psicologo",
+        "quote": "En la barberia ahora cada barbero maneja su agenda y los clientes reservan sin tener que escribirnos para preguntar disponibilidad.",
+        "name": "Emilio Vargas",
+        "role": "Barberia",
+        "avatarSrc": "/avatars/emilio.jpg",
         "avatarTone": "yellow",
         "rating": 5
       },
       {
-        "quote": "La experiencia para nuestros clientes mejoro muchisimo desde que empezamos a usar Bukky.",
-        "name": "Vicente Signorile",
-        "role": "Hospital Universitario de Caracas",
+        "quote": "Nos permite coordinar terapeutas, bloquear horarios y mantener la agenda del centro clara incluso cuando entran reservas nuevas.",
+        "name": "Marcos Herrera",
+        "role": "Centro de fisioterapia",
+        "avatarSrc": "/avatars/marcos.jpg",
         "avatarTone": "gradient",
         "rating": 5
       }
     ]
   },
+  "pages": {
+    "features": {
+      "seo": {
+        "title": "Funciones para gestionar citas, clientes y agenda",
+        "description": "Descubre las funciones de Bukky para reservas online, gestión de clientes, agenda inteligente, recordatorios automáticos, reportes y operaciones con citas en negocios de servicios.",
+        "keywords": [
+          "funciones software de citas",
+          "agenda online para negocios",
+          "reservas online",
+          "recordatorios automáticos",
+          "gestión de clientes",
+          "software para citas",
+          "agenda para psicólogos",
+          "software para barberías",
+          "agenda para clínicas"
+        ]
+      },
+      "eyebrow": "FUNCIONES",
+      "title": "Una operación de citas más clara, rápida y profesional.",
+      "description": "Bukky concentra reservas, clientes, servicios, horarios, profesionales, recordatorios y seguimiento en una experiencia pensada para negocios que dependen de su agenda diaria: psicólogos, barberías, clínicas, centros wellness, consultorías y equipos de servicios.",
+      "primaryCta": "Solicitar demo",
+      "secondaryCta": "Ver precios",
+      "metrics": [
+        {
+          "value": "24/7",
+          "label": "Reservas disponibles"
+        },
+        {
+          "value": "1",
+          "label": "Agenda centralizada"
+        },
+        {
+          "value": "Menos",
+          "label": "Coordinación manual"
+        }
+      ],
+      "pillars": [
+        {
+          "title": "Reservas online",
+          "description": "Tus clientes pueden elegir servicio, horario y disponibilidad sin depender de mensajes manuales.",
+          "icon": "calendar",
+          "points": [
+            "Página de reservas personalizada",
+            "Servicios, duraciones y horarios configurables",
+            "Confirmación inmediata para cada cita"
+          ]
+        },
+        {
+          "title": "Agenda inteligente",
+          "description": "Visualiza la disponibilidad real de tu negocio y evita conflictos entre servicios, equipo y bloqueos.",
+          "icon": "clock",
+          "points": [
+            "Vista clara de citas y bloqueos",
+            "Disponibilidad por profesional",
+            "Control de horarios y excepciones"
+          ]
+        },
+        {
+          "title": "Clientes organizados",
+          "description": "Mantiene cada cliente con contexto, historial y actividad para que el equipo trabaje con información consistente.",
+          "icon": "users",
+          "points": [
+            "Ficha de cliente centralizada",
+            "Historial de reservas",
+            "Datos listos para seguimiento"
+          ]
+        },
+        {
+          "title": "Recordatorios automáticos",
+          "description": "Reduce ausencias y mejora la experiencia con confirmaciones y avisos antes de cada cita.",
+          "icon": "bell",
+          "points": [
+            "Confirmaciones por email",
+            "Recordatorios antes de la cita",
+            "Menos tiempo coordinando manualmente"
+          ]
+        },
+        {
+          "title": "Gestión de equipo",
+          "description": "Configura profesionales, servicios y disponibilidad desde un panel pensado para operaciones reales.",
+          "icon": "team",
+          "points": [
+            "Servicios asignados por profesional",
+            "Horarios por persona",
+            "Control centralizado del negocio"
+          ]
+        },
+        {
+          "title": "Reportes y control",
+          "description": "Entiende la actividad de reservas, servicios y rendimiento para tomar mejores decisiones operativas.",
+          "icon": "chart",
+          "points": [
+            "Actividad de citas",
+            "Vista de rendimiento",
+            "Información lista para crecer"
+          ]
+        }
+      ],
+      "workflow": {
+        "eyebrow": "OPERACIÓN DIARIA",
+        "title": "Del enlace de reserva a una agenda ordenada.",
+        "description": "El flujo está pensado para que el cliente reserve sin fricción y tu negocio mantenga el control de cada espacio disponible.",
+        "steps": [
+          "Configuras servicios, profesionales y horarios.",
+          "Compartes tu enlace de reserva con clientes.",
+          "Bukky confirma la cita y mantiene la agenda actualizada."
+        ]
+      }
+    },
+    "pricing": {
+      "seo": {
+        "title": "Precios simples para tu agenda online",
+        "description": "Bukky Pro cuesta 20 dólares al mes e incluye reservas online, agenda de citas, clientes, servicios, profesionales, recordatorios y panel administrativo para negocios de servicios.",
+        "keywords": [
+          "precio software de citas",
+          "agenda online precio",
+          "reservas online mensual",
+          "bukky precios",
+          "software de citas 20 dólares"
+        ]
+      },
+      "eyebrow": "PRECIOS",
+      "title": "Un precio simple para empezar a gestionar citas mejor.",
+      "description": "Empieza con el plan actual de Bukky por 20 dólares al mes. Es una opción simple para profesionales, barberías, clínicas, centros de belleza, psicólogos y negocios de servicios que quieren ordenar su agenda online sin crear una estructura compleja desde el primer día.",
+      "plan": {
+        "eyebrow": "PLAN ACTUAL",
+        "name": "Bukky Pro",
+        "price": "$20",
+        "period": "/mes",
+        "description": "Para profesionales y negocios de servicios que quieren ordenar reservas, clientes, servicios, disponibilidad y agenda desde una sola plataforma web.",
+        "cta": "Solicitar demo",
+        "note": "Sin permanencia. Ideal para validar Bukky en tu operación real.",
+        "includedTitle": "Incluye",
+        "features": [
+          "Reservas online",
+          "Agenda y disponibilidad",
+          "Gestión de clientes",
+          "Servicios y profesionales",
+          "Recordatorios automáticos",
+          "Panel administrativo"
+        ]
+      },
+      "included": {
+        "title": "Todo lo esencial desde el primer día",
+        "items": [
+          {
+            "title": "Setup guiado",
+            "description": "Te ayudamos a configurar servicios, horarios y disponibilidad para que puedas empezar rápido."
+          },
+          {
+            "title": "Soporte estándar",
+            "description": "Acompañamiento para dudas operativas y ajustes básicos mientras empiezas a usar la plataforma."
+          },
+          {
+            "title": "Actualizaciones incluidas",
+            "description": "Las mejoras del producto se incorporan al plan sin que tengas que instalar nada."
+          }
+        ]
+      },
+      "upcoming": {
+        "eyebrow": "PRÓXIMAMENTE",
+        "title": "Planes avanzados cuando tu operación necesite más.",
+        "items": [
+          {
+            "title": "Equipos",
+            "description": "Roles, permisos y control más detallado para negocios con varias personas gestionando agenda."
+          },
+          {
+            "title": "Soporte prioritario",
+            "description": "Acompañamiento más cercano para configuraciones complejas, migraciones y seguimiento."
+          },
+          {
+            "title": "Multi-sucursal",
+            "description": "Gestión para negocios con varias ubicaciones, agendas separadas y reportes consolidados."
+          }
+        ]
+      },
+      "faq": {
+        "title": "Preguntas frecuentes",
+        "items": [
+          {
+            "question": "¿El precio es por negocio?",
+            "answer": "Sí. El plan actual está pensado para un negocio que necesita gestionar su agenda y sus reservas desde Bukky."
+          },
+          {
+            "question": "¿Puedo cancelar cuando quiera?",
+            "answer": "Sí. La idea es que puedas probar Bukky en tu operación sin compromisos largos."
+          },
+          {
+            "question": "¿Incluye soporte?",
+            "answer": "Incluye soporte estándar para ayudarte con configuración, dudas y uso diario."
+          },
+          {
+            "question": "¿Para qué tipo de negocios sirve?",
+            "answer": "Bukky encaja en negocios que trabajan con citas: psicología, barberías, clínicas, fisioterapia, estética, wellness, consultorías y otros servicios con agenda."
+          },
+          {
+            "question": "¿Los planes avanzados ya están disponibles?",
+            "answer": "Todavía no. El plan actual concentra lo esencial y los planes avanzados llegarán con funciones para equipos grandes, soporte prioritario y multi-sucursal."
+          }
+        ]
+      }
+    },
+    "contact": {
+      "seo": {
+        "title": "Contacto y demo de Bukky",
+        "description": "Contacta con Bukky para solicitar una demo, resolver dudas y evaluar si la plataforma encaja con tu negocio de citas.",
+        "keywords": [
+          "contacto bukky",
+          "demo software de citas",
+          "solicitar demo agenda online",
+          "whatsapp bukky",
+          "contactar software reservas"
+        ]
+      },
+      "eyebrow": "CONTACTO",
+      "title": "Hablemos de cómo Bukky puede ordenar tu agenda.",
+      "description": "Cuéntanos qué tipo de negocio gestionas, cuántas personas atienden citas y cómo recibes reservas hoy. Con eso podemos orientarte mejor sobre agenda online, recordatorios, clientes, servicios, profesionales y configuración inicial.",
+      "channelsTitle": "Canales directos",
+      "channels": [
+        {
+          "label": "WhatsApp",
+          "description": "Para dudas rápidas y coordinación de una demo.",
+          "href": "https://wa.me/34635693747",
+          "icon": "whatsapp"
+        },
+        {
+          "label": "Email",
+          "description": "Para enviar contexto del negocio o una solicitud más detallada.",
+          "href": "mailto:hola@bukky.app",
+          "icon": "email"
+        },
+        {
+          "label": "Instagram",
+          "description": "Para seguir novedades y escribirnos por redes.",
+          "href": "https://www.instagram.com/bukky.wegox?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+          "icon": "instagram"
+        }
+      ],
+      "form": {
+        "eyebrow": "SOLICITUD DE DEMO",
+        "badge": "Respuesta próxima",
+        "title": "Cuéntanos qué necesitas ordenar.",
+        "description": "Recibiremos tu solicitud, revisaremos el contexto de tu negocio y te responderemos con una propuesta clara para empezar con Bukky.",
+        "submit": "Enviar solicitud",
+        "submitting": "Enviando...",
+        "successTitle": "Solicitud recibida",
+        "successMessage": "Te enviamos un correo de confirmación. Revisaremos tu caso y estaremos en contacto próximamente.",
+        "errorTitle": "No se pudo enviar",
+        "errorMessage": "Inténtalo de nuevo en unos minutos o escríbenos directamente por WhatsApp.",
+        "validationTitle": "Faltan algunos datos",
+        "validationMessage": "Revisa los campos marcados para poder enviar tu solicitud.",
+        "privacyNote": "Usaremos estos datos únicamente para responder a tu solicitud y coordinar una demo de Bukky.",
+        "fields": {
+          "name": "Nombre",
+          "businessName": "Nombre del negocio",
+          "email": "Email",
+          "phone": "Teléfono",
+          "businessType": "Tipo de negocio",
+          "teamSize": "Tamaño del equipo",
+          "message": "Cuéntanos sobre tu operación"
+        },
+        "placeholders": {
+          "name": "Mariana Rodríguez",
+          "businessName": "Clínica Aurora",
+          "email": "tu@email.com",
+          "phone": "+34 600 000 000",
+          "message": "Gestionamos citas por WhatsApp y queremos ordenar agenda, clientes y recordatorios..."
+        },
+        "businessTypeOptions": [
+          {
+            "label": "Psicología",
+            "value": "psychology"
+          },
+          {
+            "label": "Barbería",
+            "value": "barbershop"
+          },
+          {
+            "label": "Clínica o salud",
+            "value": "clinic"
+          },
+          {
+            "label": "Belleza y wellness",
+            "value": "wellness"
+          },
+          {
+            "label": "Consultoría",
+            "value": "consulting"
+          },
+          {
+            "label": "Otro negocio con citas",
+            "value": "other"
+          }
+        ],
+        "teamSizeOptions": [
+          {
+            "label": "Solo yo",
+            "value": "solo"
+          },
+          {
+            "label": "2-5 personas",
+            "value": "2-5"
+          },
+          {
+            "label": "6-15 personas",
+            "value": "6-15"
+          },
+          {
+            "label": "Más de 15 personas",
+            "value": "15-plus"
+          }
+        ],
+        "errors": {
+          "name": "Indica tu nombre.",
+          "businessName": "Indica el nombre de tu negocio.",
+          "email": "Indica un email válido.",
+          "businessType": "Selecciona el tipo de negocio.",
+          "message": "Cuéntanos un poco más sobre tu operación."
+        }
+      },
+      "brief": {
+        "title": "Antes de la demo",
+        "items": [
+          "Tipo de negocio y cantidad de profesionales.",
+          "Servicios principales y duración promedio.",
+          "Cómo gestionas reservas actualmente.",
+          "Qué problema quieres resolver primero.",
+          "Si cada profesional necesita agenda propia o una agenda compartida.",
+          "Canales por los que hoy llegan tus citas: WhatsApp, Instagram, teléfono, web o referidos.",
+          "Tareas manuales que quieres reducir: confirmaciones, recordatorios, cambios de horario o seguimiento."
+        ]
+      },
+      "response": {
+        "title": "Qué revisamos contigo",
+        "items": [
+          "Flujo ideal de reserva para tus clientes.",
+          "Configuración de agenda y disponibilidad.",
+          "Plan recomendado para empezar sin complejidad.",
+          "Qué datos conviene migrar primero para ordenar clientes y reservas.",
+          "Cómo estructurar servicios, duraciones y profesionales para evitar solapamientos.",
+          "Qué automatizaciones conviene activar primero para reducir ausencias y mensajes manuales."
+        ]
+      }
+    },
+    "privacy": {
+      "seo": {
+        "title": "Política de privacidad de Bukky",
+        "description": "Consulta cómo Bukky recoge, utiliza y protege los datos enviados en formularios de contacto, solicitudes de demo y comunicaciones comerciales.",
+        "keywords": [
+          "política de privacidad Bukky",
+          "privacidad software de citas",
+          "protección de datos SaaS",
+          "datos formulario contacto Bukky"
+        ]
+      },
+      "eyebrow": "PRIVACIDAD",
+      "title": "Política de privacidad",
+      "description": "Esta página explica cómo tratamos la información que nos envías cuando solicitas una demo, contactas con Bukky o navegas por esta web.",
+      "updated": "Actualizado el 26 de julio de 2026",
+      "sections": [
+        {
+          "title": "Responsable y contacto",
+          "body": [
+            "Bukky es un producto de Wegox para negocios que gestionan citas, clientes y operaciones diarias.",
+            "Para consultas relacionadas con privacidad, solicitudes de acceso, rectificación o eliminación de datos, puedes escribirnos a support@wegox.io."
+          ]
+        },
+        {
+          "title": "Datos que podemos recoger",
+          "body": [
+            "Cuando completas un formulario podemos recoger tu nombre, email, teléfono, nombre del negocio, tipo de negocio, tamaño del equipo y el mensaje que nos compartes.",
+            "También podemos tratar información técnica básica necesaria para que la web funcione correctamente, como datos de dispositivo, navegador, idioma, fecha de solicitud y registros de seguridad."
+          ]
+        },
+        {
+          "title": "Para qué usamos la información",
+          "body": [
+            "Usamos tus datos para responder a tu solicitud, coordinar una demo, entender el contexto de tu negocio y preparar una propuesta adecuada para empezar con Bukky.",
+            "También podemos usar información agregada o no identificable para mejorar el contenido de la web, la experiencia del formulario y la calidad de nuestras comunicaciones."
+          ]
+        },
+        {
+          "title": "Base legal y comunicaciones",
+          "body": [
+            "Tratamos la información que nos envías porque existe una solicitud directa por tu parte y porque necesitamos responderla de forma razonable.",
+            "Si mantenemos conversaciones comerciales posteriores, lo haremos dentro del contexto de tu solicitud y podrás pedir que dejemos de contactarte en cualquier momento."
+          ]
+        },
+        {
+          "title": "Proveedores y envío de correos",
+          "body": [
+            "El formulario de contacto puede usar proveedores técnicos como Resend para entregar correos de confirmación al solicitante y avisos internos a nuestro equipo.",
+            "Estos proveedores actúan como infraestructura técnica para procesar la solicitud y no deben usar tus datos para fines propios ajenos a la prestación del servicio."
+          ]
+        },
+        {
+          "title": "Conservación de datos",
+          "body": [
+            "Conservaremos la información durante el tiempo necesario para responder tu solicitud, dar seguimiento comercial razonable y cumplir obligaciones técnicas, administrativas o legales aplicables.",
+            "Si nos pides eliminar tus datos, revisaremos la solicitud y la atenderemos salvo que debamos conservar cierta información por motivos legítimos o legales."
+          ]
+        },
+        {
+          "title": "Tus derechos",
+          "body": [
+            "Puedes solicitar acceso, rectificación, eliminación, limitación u oposición al tratamiento de tus datos escribiendo a support@wegox.io.",
+            "Podremos pedir información adicional para verificar tu identidad antes de atender solicitudes relacionadas con datos personales."
+          ]
+        },
+        {
+          "title": "Cambios en esta política",
+          "body": [
+            "Podemos actualizar esta política cuando evolucione el producto, cambien nuestros procesos o se incorporen nuevos proveedores.",
+            "La fecha de actualización visible en esta página indica la versión vigente de esta política."
+          ]
+        }
+      ],
+      "contactCta": {
+        "title": "¿Tienes una duda de privacidad?",
+        "description": "Centralizamos las solicitudes por el formulario de contacto para poder responder con contexto y trazabilidad.",
+        "label": "Ir a contacto"
+      }
+    },
+    "terms": {
+      "seo": {
+        "title": "Términos de uso de Bukky",
+        "description": "Consulta las condiciones generales de uso de la web de Bukky, solicitudes de demo, propiedad intelectual, disponibilidad y contacto.",
+        "keywords": [
+          "términos de uso Bukky",
+          "condiciones Bukky",
+          "términos software de citas",
+          "uso web SaaS"
+        ]
+      },
+      "eyebrow": "TÉRMINOS",
+      "title": "Términos de uso",
+      "description": "Estos términos regulan el uso de la web pública de Bukky, la solicitud de demos y la información comercial disponible antes de contratar o activar el producto.",
+      "updated": "Actualizado el 26 de julio de 2026",
+      "sections": [
+        {
+          "title": "Uso de la web",
+          "body": [
+            "Puedes navegar por la web de Bukky para conocer el producto, revisar funciones, precios, información de contacto y solicitar una demo.",
+            "No debes usar la web para enviar información falsa, interferir con su funcionamiento, intentar acceder a sistemas no autorizados o realizar actividades contrarias a la ley."
+          ]
+        },
+        {
+          "title": "Solicitudes de demo",
+          "body": [
+            "Cuando envías una solicitud de demo, nos autorizas a contactar contigo usando los datos facilitados para entender tu caso y coordinar los siguientes pasos.",
+            "Enviar una solicitud no crea una obligación de contratación ni garantiza la disponibilidad inmediata de todas las funcionalidades mencionadas en la web."
+          ]
+        },
+        {
+          "title": "Información del producto",
+          "body": [
+            "Bukky se presenta como una plataforma SaaS para reservas online, gestión de citas, clientes, servicios, profesionales, recordatorios y operaciones diarias.",
+            "Algunas funcionalidades pueden evolucionar, entrar en beta, cambiar de alcance o aparecer como próximas mejoras según el desarrollo del producto."
+          ]
+        },
+        {
+          "title": "Precio y planes",
+          "body": [
+            "La información de precios publicada en la web describe el plan actual disponible y puede actualizarse a medida que se lancen nuevas capacidades.",
+            "Cualquier condición comercial específica deberá confirmarse durante el proceso de demo, onboarding o contratación."
+          ]
+        },
+        {
+          "title": "Propiedad intelectual",
+          "body": [
+            "El logo, nombre, diseño, textos, interfaces y elementos visuales de Bukky pertenecen a sus titulares o licenciantes.",
+            "No puedes copiar, distribuir, reutilizar o explotar estos elementos sin autorización previa, salvo usos permitidos por la ley."
+          ]
+        },
+        {
+          "title": "Disponibilidad y enlaces externos",
+          "body": [
+            "Trabajamos para mantener la web disponible y actualizada, pero no garantizamos que siempre esté libre de interrupciones, errores técnicos o cambios de contenido.",
+            "La web puede enlazar a canales externos como WhatsApp, Instagram o servicios de email. El uso de esos canales queda sujeto a sus propias condiciones."
+          ]
+        },
+        {
+          "title": "Responsabilidad",
+          "body": [
+            "La información de esta web tiene carácter informativo y comercial. No sustituye acuerdos contractuales específicos ni documentación legal definitiva del servicio contratado.",
+            "En la medida permitida por la ley, no asumimos responsabilidad por daños derivados del uso indebido de la web o de decisiones tomadas sin validar condiciones concretas."
+          ]
+        },
+        {
+          "title": "Cambios y contacto",
+          "body": [
+            "Podemos actualizar estos términos cuando cambie la web, el producto, los procesos comerciales o los requisitos aplicables.",
+            "Para cualquier duda sobre estos términos, puedes contactar con nosotros a través de support@wegox.io o desde la página de contacto."
+          ]
+        }
+      ],
+      "contactCta": {
+        "title": "¿Necesitas aclarar algo?",
+        "description": "Si tienes dudas antes de solicitar una demo, podemos revisar tu caso y explicarte el encaje de Bukky.",
+        "label": "Contactar"
+      }
+    }
+  },
   "finalCta": {
-    "title": "Moderniza la gestion de tu negocio",
+      "title": "Moderniza la gestión de tu negocio",
     "description": "Centraliza citas, clientes y operaciones desde una plataforma simple y moderna.",
     "primaryCta": "Solicitar demo",
     "secondaryCta": "Contacto",
-    "note": "Plataforma moderna de gestion para negocios de servicios."
+    "note": "Plataforma moderna de gestión para negocios de servicios."
   },
   "footer": {
     "description": "Bukky es una plataforma moderna para negocios que gestionan citas, clientes y operaciones diarias.",
-    "socialLinks": [
-      {
-        "label": "Instagram",
-        "href": "https://instagram.com",
-        "icon": "instagram"
-      },
-      {
-        "label": "GitHub",
-        "href": "https://github.com",
-        "icon": "github"
-      },
-      {
-        "label": "LinkedIn",
-        "href": "https://linkedin.com",
-        "icon": "linkedin"
-      }
-    ],
     "columns": [
       {
         "title": "Producto",
         "links": [
           {
             "label": "Funcionalidades",
-            "href": "/es#features"
+            "href": "/es/funciones"
           },
           {
-            "label": "Reservas online",
-            "href": "/es#integrations"
-          },
-          {
-            "label": "Gestion de agenda",
-            "href": "/es#customers"
-          },
-          {
-            "label": "Dashboard",
-            "href": "/es#pricing"
+            "label": "Precios",
+            "href": "/es/precios"
           },
           {
             "label": "Solicitar demo",
-            "href": "/es#get-started"
-          }
-        ]
-      },
-      {
-        "title": "Soluciones",
-        "links": [
-          {
-            "label": "Clinicas",
-            "href": "/es#integrations"
-          },
-          {
-            "label": "Psicologos",
-            "href": "/es#integrations"
-          },
-          {
-            "label": "Fisioterapeutas",
-            "href": "/es#integrations"
-          },
-          {
-            "label": "Peluquerias",
-            "href": "/es#integrations"
-          },
-          {
-            "label": "Wellness",
-            "href": "/es#integrations"
+            "href": "/es/contacto"
           }
         ]
       },
@@ -274,17 +776,17 @@
         "links": [
           {
             "label": "WhatsApp",
-            "href": "https://wa.me/",
+            "href": "https://wa.me/34635693747",
             "icon": "whatsapp"
           },
           {
             "label": "Email",
-            "href": "mailto:hola@bukky.app",
+            "href": "/es/contacto",
             "icon": "email"
           },
           {
             "label": "Instagram",
-            "href": "https://instagram.com",
+            "href": "https://www.instagram.com/bukky.wegox?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
             "icon": "instagram"
           }
         ]
@@ -293,15 +795,15 @@
     "legalLinks": [
       {
         "label": "Privacidad",
-        "href": "/es#privacy"
+        "href": "/es/privacidad"
       },
       {
-        "label": "Terminos",
-        "href": "/es#terms"
+        "label": "Términos",
+        "href": "/es/terminos"
       }
     ],
     "copyright": "\u00A9 2026 Bukky. Todos los derechos reservados.",
-    "tagline": "Disenado para negocios modernos."
+    "tagline": "Diseñado para negocios modernos."
   },
   "navigation": {
     "spanish": "Espa\u00f1ol",

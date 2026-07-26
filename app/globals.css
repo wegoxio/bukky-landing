@@ -12,6 +12,12 @@
   inherits: false;
 }
 
+@property --pricing-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -233,6 +239,29 @@ body {
   }
 }
 
+@keyframes pricing-border-angle {
+  0% {
+    --pricing-angle: 0deg;
+  }
+  100% {
+    --pricing-angle: 360deg;
+  }
+}
+
+@keyframes premium-surface-sheen {
+  0% {
+    opacity: 0;
+    transform: translate3d(-180%, 0, 0) rotate(14deg);
+  }
+  24% {
+    opacity: 0.18;
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(210%, 0, 0) rotate(14deg);
+  }
+}
+
 @keyframes workflow-live-breathe {
   0%,
   100% {
@@ -312,6 +341,112 @@ body {
 
 .testimonial-card:hover::after {
   opacity: 0.3;
+}
+
+.premium-surface {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+  transition: transform 340ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 280ms ease, box-shadow 340ms ease, background-color 280ms ease;
+}
+
+.premium-surface::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0;
+  background: radial-gradient(
+    260px circle at 28% 18%,
+    rgba(151, 89, 239, 0.18) 0%,
+    rgba(255, 230, 51, 0.1) 36%,
+    rgba(151, 89, 239, 0) 76%
+  );
+  transition: opacity 260ms ease;
+}
+
+.premium-surface::after {
+  content: "";
+  position: absolute;
+  top: -70%;
+  left: -40%;
+  z-index: 0;
+  width: 34%;
+  height: 240%;
+  pointer-events: none;
+  opacity: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: translate3d(-180%, 0, 0) rotate(14deg);
+}
+
+.premium-surface > * {
+  position: relative;
+  z-index: 1;
+}
+
+.premium-surface:hover {
+  transform: translate3d(0, -5px, 0);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.premium-surface:hover::before {
+  opacity: 1;
+}
+
+.premium-surface:hover::after {
+  animation: premium-surface-sheen 900ms cubic-bezier(0.22, 1, 0.36, 1) 1;
+}
+
+.pricing-plan-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border: 1px solid transparent;
+  background:
+    linear-gradient(155deg, #191824 0%, #15151d 54%, #111116 100%) padding-box,
+    conic-gradient(
+        from var(--pricing-angle),
+        #9759ef 0deg,
+        #33c8ff 86deg,
+        #ffe633 178deg,
+        #48e5a0 266deg,
+        #9759ef 360deg
+      )
+      border-box;
+  animation: pricing-border-angle 7.5s linear infinite;
+}
+
+.pricing-plan-card::before {
+  content: "";
+  position: absolute;
+  inset: -30% -18%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.34;
+  background: radial-gradient(
+      44% 42% at 24% 28%,
+      rgba(151, 89, 239, 0.34) 0%,
+      rgba(151, 89, 239, 0) 100%
+    ),
+    radial-gradient(
+      36% 40% at 82% 18%,
+      rgba(255, 230, 51, 0.18) 0%,
+      rgba(255, 230, 51, 0) 100%
+    );
+}
+
+.pricing-plan-card > * {
+  position: relative;
+  z-index: 1;
 }
 
 .final-cta-button {
@@ -517,11 +652,13 @@ body {
   filter: saturate(1.08);
 }
 
+.feature-card h2,
 .feature-card h3,
 .feature-card p {
   transition: color 280ms ease, transform 320ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
+.feature-card:hover h2,
 .feature-card:hover h3 {
   color: rgba(255, 255, 255, 0.98);
   transform: translateY(-1px);
@@ -833,7 +970,7 @@ body {
     opacity: 1 !important;
   }
 
-  .feature-card::after {
+    .feature-card::after {
     animation: none !important;
     transform: none !important;
     opacity: 0 !important;
@@ -842,8 +979,14 @@ body {
   .feature-card,
   .feature-card::before,
   .feature-card .feature-icon,
+  .feature-card h2,
   .feature-card h3,
   .feature-card p,
+  .premium-surface,
+  .premium-surface::before,
+  .premium-surface::after,
+  .pricing-plan-card,
+  .pricing-plan-card::before,
   .testimonial-card,
   .testimonial-card::before,
   .testimonial-card::after,
@@ -873,6 +1016,15 @@ body {
 
   .feature-card:hover {
     transform: none !important;
+  }
+
+  .premium-surface:hover {
+    transform: none !important;
+  }
+
+  .premium-surface::after,
+  .pricing-plan-card {
+    animation: none !important;
   }
 
   .quick-setup-connectors,

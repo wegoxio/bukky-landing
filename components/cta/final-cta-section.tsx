@@ -3,6 +3,9 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
+import type { Locale } from "@/lib/i18n";
+import { getLocalizedRoute } from "@/lib/routes";
+
 type FinalCtaLabels = {
   title: string;
   description: string;
@@ -12,7 +15,7 @@ type FinalCtaLabels = {
 };
 
 type FinalCtaSectionProps = {
-  lang: string;
+  lang: Locale;
   labels: FinalCtaLabels;
 };
 
@@ -46,8 +49,8 @@ export function FinalCtaSection({ lang, labels }: FinalCtaSectionProps) {
     }
 
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      setIsVisible(true);
-      return;
+      const frame = window.requestAnimationFrame(() => setIsVisible(true));
+      return () => window.cancelAnimationFrame(frame);
     }
 
     const observer = new IntersectionObserver(
@@ -99,17 +102,11 @@ export function FinalCtaSection({ lang, labels }: FinalCtaSectionProps) {
 
             <div className="mt-8 grid grid-cols-1 gap-3 sm:mt-10 sm:flex sm:flex-wrap sm:items-center sm:justify-center sm:gap-4">
               <Link
-                href={`/${lang}#get-started`}
+                href={getLocalizedRoute(lang, "contact")}
                 className="final-cta-button final-cta-button-primary group inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#FFE633] px-5 py-2.5 text-[15px] font-semibold text-[#1E1E1E] sm:w-auto sm:px-6 sm:py-3 sm:text-base"
               >
                 <span>{labels.primaryCta}</span>
                 <ArrowRightIcon />
-              </Link>
-              <Link
-                href={`/${lang}#contact`}
-                className="final-cta-button final-cta-button-secondary inline-flex w-full items-center justify-center rounded-xl border border-[#9759EF] bg-[rgba(151,89,239,0.08)] px-5 py-2.5 text-[15px] font-medium text-white/90 hover:border-[#b98bff] hover:bg-[rgba(151,89,239,0.16)] hover:text-white sm:w-auto sm:px-8 sm:py-3 sm:text-base"
-              >
-                {labels.secondaryCta}
               </Link>
             </div>
 

@@ -1,12 +1,14 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 type TestimonialItem = {
   quote: string;
   name: string;
   role: string;
-  avatarTone: string;
+  avatarSrc?: string;
+  avatarTone?: string;
   rating: number;
 };
 
@@ -32,7 +34,7 @@ function StarIcon() {
   );
 }
 
-function avatarToneClass(tone: string) {
+function avatarToneClass(tone = "purple") {
   if (tone === "yellow") {
     return "bg-[#FFE633]";
   }
@@ -54,8 +56,9 @@ export function TestimonialsSection({ labels }: TestimonialsSectionProps) {
     }
 
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      setIsVisible(true);
-      return;
+      const rafId = window.requestAnimationFrame(() => setIsVisible(true));
+
+      return () => window.cancelAnimationFrame(rafId);
     }
 
     const observer = new IntersectionObserver(
@@ -131,10 +134,22 @@ export function TestimonialsSection({ labels }: TestimonialsSectionProps) {
               </p>
 
               <div className="mt-6 flex items-center gap-3 sm:mt-7">
-                <span
-                  aria-hidden="true"
-                  className={`h-9 w-9 rounded-full sm:h-10 sm:w-10 ${avatarToneClass(item.avatarTone)}`}
-                />
+                {item.avatarSrc ? (
+                  <span className="relative h-9 w-9 shrink-0 overflow-hidden rounded-full border border-white/12 bg-white/5 sm:h-10 sm:w-10">
+                    <Image
+                      src={item.avatarSrc}
+                      alt={item.name}
+                      fill
+                      sizes="40px"
+                      className="object-cover"
+                    />
+                  </span>
+                ) : (
+                  <span
+                    aria-hidden="true"
+                    className={`h-9 w-9 shrink-0 rounded-full sm:h-10 sm:w-10 ${avatarToneClass(item.avatarTone)}`}
+                  />
+                )}
                 <div>
                   <p className="text-[17px] leading-tight text-white/92 sm:text-[20px]">{item.name}</p>
                   <p className="mt-1 text-xs leading-tight text-white/34 sm:text-sm">{item.role}</p>

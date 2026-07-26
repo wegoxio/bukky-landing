@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { defaultLocale, isValidLocale, locales, type Locale } from "@/lib/i18n";
-import { getSiteUrl, siteConfig } from "@/lib/site-config";
+import { getSiteAssetUrl, getSiteUrl, siteConfig } from "@/lib/site-config";
 
 import { getDictionary } from "./dictionaries";
 import "../globals.css";
@@ -35,6 +35,7 @@ export async function generateMetadata({
   const dictionary = await getDictionary(lang);
   const metadataTitle = `${siteConfig.name} | ${dictionary.seo.title}`;
   const metadataDescription = dictionary.seo.description;
+  const ogImageUrl = getSiteAssetUrl(siteConfig.ogImage);
 
   return {
     metadataBase: new URL(getSiteUrl()),
@@ -67,7 +68,7 @@ export async function generateMetadata({
         .map((locale) => openGraphLocaleMap[locale]),
       images: [
         {
-          url: siteConfig.ogImage,
+          url: ogImageUrl,
           width: 1200,
           height: 630,
           alt: dictionary.seo.title,
@@ -79,7 +80,7 @@ export async function generateMetadata({
       title: metadataTitle,
       description: metadataDescription,
       creator: siteConfig.twitterHandle,
-      images: [siteConfig.ogImage],
+      images: [ogImageUrl],
     },
   };
 }

@@ -32,8 +32,9 @@ export function HeroHighlightsStrip({ labels }: HeroHighlightsStripProps) {
     }
 
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      setProgress(1);
-      return;
+      const rafId = window.requestAnimationFrame(() => setProgress(1));
+
+      return () => window.cancelAnimationFrame(rafId);
     }
 
     let rafId: number | null = null;

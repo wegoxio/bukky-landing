@@ -22,8 +22,9 @@ function useCountUp(target: number, duration: number, start: boolean): number {
 
   useEffect(() => {
     if (!start) {
-      setValue(0);
-      return;
+      const rafId = window.requestAnimationFrame(() => setValue(0));
+
+      return () => window.cancelAnimationFrame(rafId);
     }
 
     let rafId = 0;
@@ -90,11 +91,10 @@ export function HeroDashboardCard({ labels }: HeroDashboardCardProps) {
     }
 
     let rafId = 0;
+    let resetRafId = 0;
     let startTime: number | null = null;
     const duration = 1500;
     const target = 76;
-    setProgressWidth(0);
-    setIsProgressComplete(false);
 
     const step = (timestamp: number) => {
       if (startTime === null) {
@@ -114,9 +114,16 @@ export function HeroDashboardCard({ labels }: HeroDashboardCardProps) {
       }
     };
 
-    rafId = window.requestAnimationFrame(step);
+    resetRafId = window.requestAnimationFrame(() => {
+      setProgressWidth(0);
+      setIsProgressComplete(false);
+      rafId = window.requestAnimationFrame(step);
+    });
 
-    return () => window.cancelAnimationFrame(rafId);
+    return () => {
+      window.cancelAnimationFrame(resetRafId);
+      window.cancelAnimationFrame(rafId);
+    };
   }, [isInView]);
 
   const activeWorkflowsValue = useCountUp(127, 1300, isInView);

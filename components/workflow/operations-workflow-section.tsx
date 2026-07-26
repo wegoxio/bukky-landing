@@ -163,8 +163,9 @@ export function OperationsWorkflowSection({
     }
 
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      setIsVisible(true);
-      return;
+      const rafId = window.requestAnimationFrame(() => setIsVisible(true));
+
+      return () => window.cancelAnimationFrame(rafId);
     }
 
     const observer = new IntersectionObserver(

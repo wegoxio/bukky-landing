@@ -15,15 +15,8 @@ type FooterColumn = {
   links: FooterLink[];
 };
 
-type FooterSocialLink = {
-  label: string;
-  href: string;
-  icon: string;
-};
-
 type FooterLabels = {
   description: string;
-  socialLinks: FooterSocialLink[];
   columns: FooterColumn[];
   legalLinks: FooterLink[];
   copyright: string;
@@ -54,41 +47,6 @@ function FooterIcon({ name }: { name: string }) {
         <rect x="3.5" y="3.5" width="17" height="17" rx="5" />
         <circle cx="12" cy="12" r="4" />
         <circle cx="17.6" cy="6.4" r="0.8" fill="currentColor" stroke="none" />
-      </svg>
-    );
-  }
-
-  if (name === "github") {
-    return (
-      <svg
-        aria-hidden="true"
-        viewBox="0 0 24 24"
-        fill="none"
-        className="h-4 w-4"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M9 18.2c-3.6 1.1-3.6-2.2-5-2.8M14 20v-2.8a2.4 2.4 0 0 0-.7-1.8c2.7-.3 5.5-1.3 5.5-5.9a4.5 4.5 0 0 0-1.2-3.1 4.1 4.1 0 0 0-.1-3s-1-.3-3.2 1.2a11 11 0 0 0-5.8 0C6.3 3.1 5.3 3.4 5.3 3.4a4.1 4.1 0 0 0-.1 3A4.5 4.5 0 0 0 4 9.5c0 4.6 2.8 5.6 5.5 5.9a2.4 2.4 0 0 0-.7 1.8V20" />
-      </svg>
-    );
-  }
-
-  if (name === "linkedin") {
-    return (
-      <svg
-        aria-hidden="true"
-        viewBox="0 0 24 24"
-        fill="none"
-        className="h-4 w-4"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M16 8a5 5 0 0 1 5 5v6h-4v-6a1 1 0 0 0-2 0v6h-4v-11h4v1.6A4.4 4.4 0 0 1 16 8Z" />
-        <path d="M7 9H3v10h4V9ZM5 5.2a.8.8 0 1 0 0 1.6.8.8 0 0 0 0-1.6Z" />
       </svg>
     );
   }
@@ -155,8 +113,8 @@ export function SiteFooter({ labels }: SiteFooterProps) {
     }
 
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      setIsVisible(true);
-      return;
+      const frame = window.requestAnimationFrame(() => setIsVisible(true));
+      return () => window.cancelAnimationFrame(frame);
     }
 
     const observer = new IntersectionObserver(
@@ -182,13 +140,13 @@ export function SiteFooter({ labels }: SiteFooterProps) {
     <footer
       id="contact"
       ref={sectionRef}
-      className="relative overflow-hidden border-t border-white/7 pt-18 pb-10 sm:pt-24 lg:pt-28"
+      className="relative overflow-hidden border-t border-white/7 pt-12 pb-8 sm:pt-14 sm:pb-9 lg:pt-16"
     >
-      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(55%_70%_at_18%_38%,rgba(151,89,239,0.16)_0%,rgba(151,89,239,0)_72%),radial-gradient(45%_65%_at_82%_62%,rgba(255,230,51,0.08)_0%,rgba(255,230,51,0)_78%)]" />
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(42%_70%_at_18%_38%,rgba(151,89,239,0.13)_0%,rgba(151,89,239,0)_72%),radial-gradient(34%_60%_at_82%_62%,rgba(255,230,51,0.06)_0%,rgba(255,230,51,0)_78%)]" />
 
       <div className="mx-auto w-full max-w-[1120px] px-5 sm:px-6">
         <div
-          className="grid gap-10 sm:gap-12 lg:grid-cols-[minmax(0,1.3fr)_repeat(3,minmax(0,0.82fr))] lg:gap-10"
+          className="grid gap-8 sm:gap-10 md:grid-cols-[minmax(0,1.45fr)_minmax(150px,0.5fr)_minmax(190px,0.62fr)] md:items-start lg:gap-12"
           style={{
             opacity: isVisible ? 1 : 0,
             transform: isVisible
@@ -200,96 +158,72 @@ export function SiteFooter({ labels }: SiteFooterProps) {
           }}
         >
           <div>
-            <p className="max-w-[440px] text-[18px] leading-relaxed text-white/54 sm:text-[26px] sm:leading-[1.32] lg:text-[34px] lg:leading-[1.28]">
+            <Image
+              src="/bukky_logo_completo.svg"
+              alt="Bukky"
+              width={214}
+              height={50}
+              className="h-auto w-[160px] sm:w-[190px] lg:w-[214px]"
+            />
+
+            <p className="mt-5 max-w-[390px] text-sm leading-relaxed text-white/52 sm:text-[15px]">
               {labels.description}
             </p>
-
-            <ul className="mt-6 flex items-center gap-2.5 sm:mt-8 sm:gap-3">
-              {labels.socialLinks.map((item) => (
-                <li key={item.label}>
-                  <Link
-                    href={item.href}
-                    target="_blank"
-                    rel="noreferrer"
-                    aria-label={item.label}
-                    className="group inline-flex h-9 w-9 items-center justify-center rounded-xl border border-[#9759EF]/42 bg-[rgba(151,89,239,0.08)] text-[#D6B8FF] transition-[transform,border-color,color,background-color,box-shadow] duration-300 hover:-translate-y-0.5 hover:border-[#9759EF]/72 hover:bg-[rgba(151,89,239,0.16)] hover:text-white hover:shadow-[0_10px_24px_rgba(0,0,0,0.34)] sm:h-10 sm:w-10"
-                  >
-                    <FooterIcon name={item.icon} />
-                  </Link>
-                </li>
-              ))}
-            </ul>
-
-            <div className="mt-8 sm:mt-10">
-              <Image
-                src="/bukky_logo_completo.svg"
-                alt="Bukky"
-                width={305}
-                height={72}
-                className="h-auto w-[180px] sm:w-[230px] lg:w-[305px]"
-              />
-            </div>
-
-            <ul className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-white/42 sm:mt-5 sm:gap-x-5 sm:text-sm">
-              {labels.legalLinks.map((link) => (
-                <li key={link.label}>
-                  <Link
-                    href={link.href}
-                    className="transition-colors duration-200 hover:text-white/78"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
           </div>
 
-          {labels.columns.map((column, index) => (
-            <div
-              key={column.title}
-              style={{
-                opacity: isVisible ? 1 : 0,
-                transform: isVisible
-                  ? "translate3d(0,0,0)"
-                  : "translate3d(0,18px,0)",
-                transition:
-                  "opacity 700ms cubic-bezier(0.22,1,0.36,1), transform 700ms cubic-bezier(0.22,1,0.36,1)",
-                transitionDelay: `${220 + index * 100}ms`,
-              }}
-            >
-              <h3 className="text-[15px] font-medium text-white/88 sm:text-base">{column.title}</h3>
+          {labels.columns.map((column, index) => {
+            const isIconOnlyColumn = column.links.every((link) => link.icon);
 
-              <ul className="mt-4 space-y-3 sm:mt-5 sm:space-y-4">
-                {column.links.map((link) => {
-                  const external = isExternalLink(link.href);
+            return (
+              <div
+                key={column.title}
+                style={{
+                  opacity: isVisible ? 1 : 0,
+                  transform: isVisible
+                    ? "translate3d(0,0,0)"
+                    : "translate3d(0,18px,0)",
+                  transition:
+                    "opacity 700ms cubic-bezier(0.22,1,0.36,1), transform 700ms cubic-bezier(0.22,1,0.36,1)",
+                  transitionDelay: `${220 + index * 100}ms`,
+                }}
+              >
+                <h3 className="text-sm font-medium text-white/88 sm:text-[15px]">{column.title}</h3>
 
-                  return (
-                    <li key={link.label}>
-                      <Link
-                        href={link.href}
-                        target={external ? "_blank" : undefined}
-                        rel={external ? "noreferrer" : undefined}
-                        className="group inline-flex items-center gap-2.5 text-sm leading-relaxed text-white/42 transition-colors duration-200 hover:text-white/78 sm:text-[15px]"
-                      >
-                        {link.icon ? (
-                          <span className="inline-flex h-6 w-6 items-center justify-center rounded-lg border border-white/12 bg-white/[0.02] text-white/64 transition-colors duration-200 group-hover:text-white">
+                <ul className={isIconOnlyColumn ? "mt-4 flex items-center gap-2.5" : "mt-4 space-y-3"}>
+                  {column.links.map((link) => {
+                    const external = isExternalLink(link.href);
+
+                    return (
+                      <li key={link.label}>
+                        <Link
+                          href={link.href}
+                          target={external ? "_blank" : undefined}
+                          rel={external ? "noreferrer" : undefined}
+                          aria-label={isIconOnlyColumn ? link.label : undefined}
+                          className={
+                            isIconOnlyColumn
+                              ? "group inline-flex h-9 w-9 items-center justify-center rounded-xl border border-white/12 bg-white/[0.025] text-white/62 transition-[transform,border-color,color,background-color,box-shadow] duration-300 hover:-translate-y-0.5 hover:border-[#9759EF]/60 hover:bg-[rgba(151,89,239,0.12)] hover:text-white hover:shadow-[0_10px_24px_rgba(0,0,0,0.32)]"
+                              : "group inline-flex items-center gap-2.5 text-sm leading-relaxed text-white/46 transition-colors duration-200 hover:text-white/82"
+                          }
+                        >
+                          {link.icon ? (
                             <FooterIcon name={link.icon} />
-                          </span>
-                        ) : null}
-                        <span>{link.label}</span>
-                      </Link>
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
-          ))}
+                          ) : null}
+                          <span className={isIconOnlyColumn ? "sr-only" : undefined}>{link.label}</span>
+                        </Link>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            );
+          })}
         </div>
 
-        <div className="mt-16 h-px bg-white/8" />
+        <div className="mt-9 h-px bg-white/8 sm:mt-10" />
 
         <div
-          className="mt-8 flex flex-col gap-3 text-sm text-white/34 sm:flex-row sm:items-center sm:justify-between"
+          className="mt-5 flex flex-col gap-3 text-xs text-white/36 sm:flex-row sm:items-center sm:justify-between sm:text-sm"
           style={{
             opacity: isVisible ? 1 : 0,
             transform: isVisible
@@ -299,7 +233,18 @@ export function SiteFooter({ labels }: SiteFooterProps) {
               "opacity 680ms cubic-bezier(0.22,1,0.36,1) 280ms, transform 680ms cubic-bezier(0.22,1,0.36,1) 280ms",
           }}
         >
-          <p>{labels.copyright}</p>
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+            <p>{labels.copyright}</p>
+            {labels.legalLinks.map((link) => (
+              <Link
+                key={link.label}
+                href={link.href}
+                className="transition-colors duration-200 hover:text-white/78"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
           <p>{labels.tagline}</p>
         </div>
       </div>

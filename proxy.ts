@@ -17,11 +17,11 @@ export function proxy(request: NextRequest) {
   const redirectUrl = request.nextUrl.clone();
   redirectUrl.pathname = `/${defaultLocale}${pathname === "/" ? "" : pathname}`;
 
-  return NextResponse.redirect(redirectUrl);
+  return NextResponse.redirect(redirectUrl, 308);
 }
 
 export const config = {
   matcher: [
-    "/((?!api|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt|.*\\..*).*)",
+    "/((?!api|_next/static|_next/image|favicon.ico|opengraph-image|twitter-image|sitemap.xml|robots.txt|.*\\..*).*)",
   ],
 };

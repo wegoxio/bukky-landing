@@ -1,7 +1,7 @@
 {
   "seo": {
     "title": "Book appointments and run your business in one place",
-    "description": "SaaS software to schedule appointments, manage staff and services, track analytics, and share fast booking links.",
+    "description": "SaaS software to schedule online appointments, manage clients, staff, services, reminders, and daily operations for psychology practices, barbershops, clinics, and service businesses.",
     "keywords": [
       "appointment scheduling software",
       "online booking system",
@@ -10,13 +10,17 @@
       "business analytics dashboard",
       "booking link",
       "reservation software",
-      "saas booking platform"
+      "saas booking platform",
+      "software for psychologists",
+      "barbershop booking software",
+      "clinic scheduling software",
+      "appointment software for service businesses"
     ]
   },
   "home": {
     "badge": "Now in public beta",
     "title": "Manage appointments, clients, and operations in one place",
-    "description": "Bukky helps service businesses manage bookings, clients, and daily operations from a modern, fast, and easy-to-use platform.",
+    "description": "Bukky helps psychologists, barbershops, clinics, beauty centers, and service businesses manage bookings, clients, reminders, and daily operations from a modern, fast, and easy-to-use platform.",
     "primaryCta": "Request demo",
     "secondaryCta": "View platform",
     "trustLabel": "Trusted by 2,500+ teams",
@@ -47,13 +51,17 @@
   },
   "navbar": {
     "features": "Features",
-    "integrations": "Integrations",
     "customers": "Customers",
     "pricing": "Pricing",
+    "contact": "Contact",
     "signIn": "Sign in",
-    "getStarted": "Get started",
+    "getStarted": "Request demo",
     "langEs": "ES",
-    "langEn": "EN"
+    "langEn": "EN",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "switchToSpanish": "Switch language to Spanish",
+    "switchToEnglish": "Switch language to English"
   },
   "features": {
     "eyebrow": "FEATURES",
@@ -83,6 +91,43 @@
       {
         "title": "Reports and metrics",
         "description": "Track activity, bookings, and your operation performance."
+      }
+    ]
+  },
+  "industries": {
+    "eyebrow": "APPOINTMENT BUSINESSES",
+    "title": "Bukky fits operations where every booking matters.",
+    "description": "The platform is built for psychologists, barbershops, clinics, beauty and wellness centers, and other service businesses that depend on real availability, organized clients, confirmations, and clear reminders.",
+    "items": [
+      {
+        "title": "Psychology and therapy",
+        "description": "Organize sessions, professional availability, patient contact details, and confirmations without relying on scattered conversations.",
+        "focus": "Confidential calendar, confirmations, and less manual coordination",
+        "icon": "psychology"
+      },
+      {
+        "title": "Barbershops and salons",
+        "description": "Let each client choose a service, professional, and available time slot while the team keeps the schedule updated throughout the day.",
+        "focus": "Bookings by professional, service duration, and queue control",
+        "icon": "barbershop"
+      },
+      {
+        "title": "Clinics and health",
+        "description": "Centralize appointments, blocked time, professionals, and operational follow-up for private practices, physiotherapy centers, and clinical aesthetics.",
+        "focus": "Centralized calendar for multiple professionals",
+        "icon": "clinic"
+      },
+      {
+        "title": "Beauty and wellness",
+        "description": "Manage treatments, recurring bookings, availability, and reminders for nail studios, spas, salons, and wellness experiences.",
+        "focus": "Services, reminders, and a polished booking experience",
+        "icon": "wellness"
+      },
+      {
+        "title": "Consulting and services",
+        "description": "Coordinate meetings, calls, advisory sessions, and scheduled client work that needs clear spaces in your calendar.",
+        "focus": "Sales calls, sessions, and client follow-up",
+        "icon": "services"
       }
     ]
   },
@@ -170,27 +215,534 @@
     "title": "Loved by modern teams",
     "items": [
       {
-        "quote": "Appointment management went from being manual and chaotic to something much simpler and professional.",
+        "quote": "In my practice, Bukky helps me organize sessions, confirm time slots, and reduce back-and-forth messages with each patient.",
         "name": "Mariana Rodriguez",
-        "role": "Psychologist",
+        "role": "Clinical psychologist",
+        "avatarSrc": "/avatars/mariana.jpg",
         "avatarTone": "purple",
         "rating": 5
       },
       {
-        "quote": "I now have better control of my availability and far less time wasted coordinating schedules.",
-        "name": "Carlos Taraschi",
-        "role": "Psychologist",
+        "quote": "At the barbershop, each barber now manages their schedule and clients book without messaging us first to ask for availability.",
+        "name": "Emilio Vargas",
+        "role": "Barbershop",
+        "avatarSrc": "/avatars/emilio.jpg",
         "avatarTone": "yellow",
         "rating": 5
       },
       {
-        "quote": "The experience for our clients improved dramatically since we started using Bukky.",
-        "name": "Vicente Signorile",
-        "role": "Hospital Universitario de Caracas",
+        "quote": "It lets us coordinate therapists, block time slots, and keep the center schedule clear even as new bookings come in.",
+        "name": "Marcos Herrera",
+        "role": "Physical therapy center",
+        "avatarSrc": "/avatars/marcos.jpg",
         "avatarTone": "gradient",
         "rating": 5
       }
     ]
+  },
+  "pages": {
+    "features": {
+      "seo": {
+        "title": "Features for appointment scheduling and calendar management",
+        "description": "Explore Bukky features for online booking, client management, smart scheduling, automated reminders, reporting, and appointment-based service operations.",
+        "keywords": [
+          "appointment scheduling features",
+          "online booking software",
+          "client management platform",
+          "automated appointment reminders",
+          "booking calendar software",
+          "service business scheduling",
+          "calendar for psychologists",
+          "barbershop scheduling software",
+          "clinic booking calendar"
+        ]
+      },
+      "eyebrow": "FEATURES",
+      "title": "A clearer, faster, more professional appointment operation.",
+      "description": "Bukky brings bookings, clients, services, schedules, professionals, reminders, and follow-up into one experience built for businesses that depend on their daily calendar: psychologists, barbershops, clinics, wellness centers, consultancies, and service teams.",
+      "primaryCta": "Request demo",
+      "secondaryCta": "View pricing",
+      "metrics": [
+        {
+          "value": "24/7",
+          "label": "Bookings available"
+        },
+        {
+          "value": "1",
+          "label": "Centralized calendar"
+        },
+        {
+          "value": "Less",
+          "label": "Manual coordination"
+        }
+      ],
+      "pillars": [
+        {
+          "title": "Online booking",
+          "description": "Clients can choose a service, time slot, and real availability without waiting for manual messages.",
+          "icon": "calendar",
+          "points": [
+            "Personalized booking page",
+            "Configurable services, durations, and schedules",
+            "Instant confirmation for every appointment"
+          ]
+        },
+        {
+          "title": "Smart calendar",
+          "description": "See real business availability and prevent conflicts across services, team members, and blocked time.",
+          "icon": "clock",
+          "points": [
+            "Clear view of appointments and blocks",
+            "Availability by professional",
+            "Control over schedules and exceptions"
+          ]
+        },
+        {
+          "title": "Organized clients",
+          "description": "Keep each client with context, history, and activity so the team works from consistent information.",
+          "icon": "users",
+          "points": [
+            "Centralized client profile",
+            "Booking history",
+            "Follow-up ready data"
+          ]
+        },
+        {
+          "title": "Automated reminders",
+          "description": "Reduce no-shows and improve the experience with confirmations and reminders before each appointment.",
+          "icon": "bell",
+          "points": [
+            "Email confirmations",
+            "Pre-appointment reminders",
+            "Less time spent coordinating manually"
+          ]
+        },
+        {
+          "title": "Team management",
+          "description": "Set up professionals, services, and availability from a dashboard designed for real operations.",
+          "icon": "team",
+          "points": [
+            "Services assigned by professional",
+            "Schedules by team member",
+            "Centralized business control"
+          ]
+        },
+        {
+          "title": "Reporting and control",
+          "description": "Understand booking activity, services, and performance so you can make better operational decisions.",
+          "icon": "chart",
+          "points": [
+            "Appointment activity",
+            "Performance view",
+            "Information ready for growth"
+          ]
+        }
+      ],
+      "workflow": {
+        "eyebrow": "DAILY OPERATION",
+        "title": "From booking link to an organized calendar.",
+        "description": "The flow is designed so clients book without friction while your business keeps control of every available slot.",
+        "steps": [
+          "Configure services, professionals, and schedules.",
+          "Share your booking link with clients.",
+          "Bukky confirms each appointment and keeps the calendar updated."
+        ]
+      }
+    },
+    "pricing": {
+      "seo": {
+        "title": "Simple pricing for your online booking calendar",
+        "description": "Bukky Pro costs 20 dollars per month and includes online booking, appointment calendar, clients, services, professionals, reminders, and an admin dashboard for service businesses.",
+        "keywords": [
+          "appointment scheduling pricing",
+          "online booking software price",
+          "monthly booking calendar",
+          "bukky pricing",
+          "20 dollar scheduling software"
+        ]
+      },
+      "eyebrow": "PRICING",
+      "title": "One simple price to start managing appointments better.",
+      "description": "Start with the current Bukky plan for 20 dollars per month. It is a simple option for professionals, barbershops, clinics, beauty centers, psychologists, and service businesses that want to organize an online calendar without a complex structure from day one.",
+      "plan": {
+        "eyebrow": "CURRENT PLAN",
+        "name": "Bukky Pro",
+        "price": "$20",
+        "period": "/month",
+        "description": "For professionals and service businesses that want to organize bookings, clients, services, availability, and calendar from one web platform.",
+        "cta": "Request demo",
+        "note": "No long-term commitment. Ideal for validating Bukky in your real operation.",
+        "includedTitle": "Included",
+        "features": [
+          "Online booking",
+          "Calendar and availability",
+          "Client management",
+          "Services and professionals",
+          "Automated reminders",
+          "Admin dashboard"
+        ]
+      },
+      "included": {
+        "title": "Everything essential from day one",
+        "items": [
+          {
+            "title": "Guided setup",
+            "description": "We help you configure services, schedules, and availability so you can start quickly."
+          },
+          {
+            "title": "Standard support",
+            "description": "Support for operational questions and basic adjustments while you start using the platform."
+          },
+          {
+            "title": "Updates included",
+            "description": "Product improvements are included in the plan without installing anything."
+          }
+        ]
+      },
+      "upcoming": {
+        "eyebrow": "COMING SOON",
+        "title": "Advanced plans when your operation needs more.",
+        "items": [
+          {
+            "title": "Teams",
+            "description": "Roles, permissions, and more detailed control for businesses with multiple people managing schedules."
+          },
+          {
+            "title": "Priority support",
+            "description": "Closer support for complex configurations, migrations, and follow-up."
+          },
+          {
+            "title": "Multi-location",
+            "description": "Management for businesses with multiple locations, separate calendars, and consolidated reporting."
+          }
+        ]
+      },
+      "faq": {
+        "title": "Frequently asked questions",
+        "items": [
+          {
+            "question": "Is the price per business?",
+            "answer": "Yes. The current plan is designed for one business that needs to manage its calendar and bookings from Bukky."
+          },
+          {
+            "question": "Can I cancel anytime?",
+            "answer": "Yes. The idea is that you can try Bukky in your operation without long commitments."
+          },
+          {
+            "question": "Does it include support?",
+            "answer": "It includes standard support to help with setup, questions, and daily usage."
+          },
+          {
+            "question": "What type of businesses is it for?",
+            "answer": "Bukky fits appointment-based businesses: psychology, barbershops, clinics, physiotherapy, beauty, wellness, consulting, and other services with a calendar."
+          },
+          {
+            "question": "Are advanced plans available now?",
+            "answer": "Not yet. The current plan concentrates the essentials and advanced plans will arrive with features for larger teams, priority support, and multi-location operations."
+          }
+        ]
+      }
+    },
+    "contact": {
+      "seo": {
+        "title": "Contact and demo for Bukky",
+        "description": "Contact Bukky to request a demo, ask questions, and evaluate whether the platform fits your appointment-based business.",
+        "keywords": [
+          "contact bukky",
+          "appointment software demo",
+          "request online booking demo",
+          "bukky whatsapp",
+          "contact booking software"
+        ]
+      },
+      "eyebrow": "CONTACT",
+      "title": "Let's talk about how Bukky can organize your calendar.",
+      "description": "Tell us what kind of business you run, how many people take appointments, and how you receive bookings today. With that, we can guide you on online scheduling, reminders, clients, services, professionals, and initial setup.",
+      "channelsTitle": "Direct channels",
+      "channels": [
+        {
+          "label": "WhatsApp",
+          "description": "For quick questions and demo coordination.",
+          "href": "https://wa.me/34635693747",
+          "icon": "whatsapp"
+        },
+        {
+          "label": "Email",
+          "description": "For business context or a more detailed request.",
+          "href": "mailto:hello@bukky.app",
+          "icon": "email"
+        },
+        {
+          "label": "Instagram",
+          "description": "For product updates and direct messages on social.",
+          "href": "https://www.instagram.com/bukky.wegox?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+          "icon": "instagram"
+        }
+      ],
+      "form": {
+        "eyebrow": "DEMO REQUEST",
+        "badge": "Fast reply",
+        "title": "Tell us what you need to organize.",
+        "description": "We will receive your request, review your business context, and reply with a clear proposal to start with Bukky.",
+        "submit": "Send request",
+        "submitting": "Sending...",
+        "successTitle": "Request received",
+        "successMessage": "We sent you a confirmation email. We will review your case and contact you soon.",
+        "errorTitle": "Could not send",
+        "errorMessage": "Try again in a few minutes or contact us directly on WhatsApp.",
+        "validationTitle": "Some details are missing",
+        "validationMessage": "Review the highlighted fields so we can send your request.",
+        "privacyNote": "We will only use this information to answer your request and coordinate a Bukky demo.",
+        "fields": {
+          "name": "Name",
+          "businessName": "Business name",
+          "email": "Email",
+          "phone": "Phone",
+          "businessType": "Business type",
+          "teamSize": "Team size",
+          "message": "Tell us about your operation"
+        },
+        "placeholders": {
+          "name": "Mariana Rodriguez",
+          "businessName": "Aurora Clinic",
+          "email": "you@email.com",
+          "phone": "+34 600 000 000",
+          "message": "We manage appointments on WhatsApp and want to organize calendar, clients, and reminders..."
+        },
+        "businessTypeOptions": [
+          {
+            "label": "Psychology",
+            "value": "psychology"
+          },
+          {
+            "label": "Barbershop",
+            "value": "barbershop"
+          },
+          {
+            "label": "Clinic or health",
+            "value": "clinic"
+          },
+          {
+            "label": "Beauty and wellness",
+            "value": "wellness"
+          },
+          {
+            "label": "Consulting",
+            "value": "consulting"
+          },
+          {
+            "label": "Other appointment business",
+            "value": "other"
+          }
+        ],
+        "teamSizeOptions": [
+          {
+            "label": "Just me",
+            "value": "solo"
+          },
+          {
+            "label": "2-5 people",
+            "value": "2-5"
+          },
+          {
+            "label": "6-15 people",
+            "value": "6-15"
+          },
+          {
+            "label": "More than 15 people",
+            "value": "15-plus"
+          }
+        ],
+        "errors": {
+          "name": "Enter your name.",
+          "businessName": "Enter your business name.",
+          "email": "Enter a valid email.",
+          "businessType": "Select your business type.",
+          "message": "Tell us a bit more about your operation."
+        }
+      },
+      "brief": {
+        "title": "Before the demo",
+        "items": [
+          "Business type and number of professionals.",
+          "Main services and average duration.",
+          "How you manage bookings today.",
+          "The first problem you want to solve.",
+          "Whether each professional needs their own calendar or a shared business calendar.",
+          "Channels where bookings arrive today: WhatsApp, Instagram, phone, website, or referrals.",
+          "Manual tasks you want to reduce: confirmations, reminders, schedule changes, or follow-up."
+        ]
+      },
+      "response": {
+        "title": "What we review with you",
+        "items": [
+          "Ideal booking flow for your clients.",
+          "Calendar and availability configuration.",
+          "Recommended plan to start without complexity.",
+          "Which data should be migrated first to organize clients and bookings.",
+          "How to structure services, durations, and professionals to prevent overlaps.",
+          "Which automations should be activated first to reduce no-shows and manual messages."
+        ]
+      }
+    },
+    "privacy": {
+      "seo": {
+        "title": "Bukky privacy policy",
+        "description": "Learn how Bukky collects, uses, and protects data submitted through contact forms, demo requests, and business communications.",
+        "keywords": [
+          "Bukky privacy policy",
+          "appointment software privacy",
+          "SaaS data protection",
+          "Bukky contact form data"
+        ]
+      },
+      "eyebrow": "PRIVACY",
+      "title": "Privacy policy",
+      "description": "This page explains how we handle information you send when requesting a demo, contacting Bukky, or browsing this website.",
+      "updated": "Updated July 26, 2026",
+      "sections": [
+        {
+          "title": "Controller and contact",
+          "body": [
+            "Bukky is a Wegox product for businesses that manage appointments, clients, and daily operations.",
+            "For privacy questions, access requests, correction, or deletion requests, you can contact us at support@wegox.io."
+          ]
+        },
+        {
+          "title": "Data we may collect",
+          "body": [
+            "When you complete a form, we may collect your name, email, phone number, business name, business type, team size, and the message you share with us.",
+            "We may also process basic technical information needed for the website to work correctly, such as device, browser, language, request date, and security logs."
+          ]
+        },
+        {
+          "title": "How we use the information",
+          "body": [
+            "We use your data to answer your request, coordinate a demo, understand your business context, and prepare a relevant proposal to start with Bukky.",
+            "We may also use aggregated or non-identifiable information to improve website content, form experience, and communication quality."
+          ]
+        },
+        {
+          "title": "Legal basis and communications",
+          "body": [
+            "We process the information you send because you made a direct request and because we need to respond to it in a reasonable way.",
+            "If we continue commercial conversations, they will stay within the context of your request and you may ask us to stop contacting you at any time."
+          ]
+        },
+        {
+          "title": "Providers and email delivery",
+          "body": [
+            "The contact form may use technical providers such as Resend to deliver confirmation emails to the requester and internal notifications to our team.",
+            "These providers act as technical infrastructure to process the request and should not use your data for their own unrelated purposes."
+          ]
+        },
+        {
+          "title": "Data retention",
+          "body": [
+            "We retain information for as long as needed to answer your request, provide reasonable commercial follow-up, and meet applicable technical, administrative, or legal obligations.",
+            "If you ask us to delete your data, we will review the request and address it unless certain information must be retained for legitimate or legal reasons."
+          ]
+        },
+        {
+          "title": "Your rights",
+          "body": [
+            "You can request access, correction, deletion, restriction, or objection to the processing of your data by writing to support@wegox.io.",
+            "We may ask for additional information to verify your identity before responding to requests related to personal data."
+          ]
+        },
+        {
+          "title": "Changes to this policy",
+          "body": [
+            "We may update this policy as the product evolves, processes change, or new providers are added.",
+            "The update date shown on this page indicates the current version of this policy."
+          ]
+        }
+      ],
+      "contactCta": {
+        "title": "Have a privacy question?",
+        "description": "We centralize requests through the contact page so we can answer with context and traceability.",
+        "label": "Go to contact"
+      }
+    },
+    "terms": {
+      "seo": {
+        "title": "Bukky terms of use",
+        "description": "Review the general terms for using the Bukky website, demo requests, intellectual property, availability, and contact.",
+        "keywords": [
+          "Bukky terms of use",
+          "Bukky conditions",
+          "appointment software terms",
+          "SaaS website terms"
+        ]
+      },
+      "eyebrow": "TERMS",
+      "title": "Terms of use",
+      "description": "These terms cover the public Bukky website, demo requests, and commercial information available before contracting or activating the product.",
+      "updated": "Updated July 26, 2026",
+      "sections": [
+        {
+          "title": "Website use",
+          "body": [
+            "You may browse the Bukky website to learn about the product, review features, pricing, contact information, and request a demo.",
+            "You must not use the website to submit false information, interfere with its operation, attempt unauthorized access, or perform activities contrary to the law."
+          ]
+        },
+        {
+          "title": "Demo requests",
+          "body": [
+            "When you submit a demo request, you authorize us to contact you using the details provided so we can understand your case and coordinate next steps.",
+            "Submitting a request does not create a purchase obligation and does not guarantee immediate availability of every feature mentioned on the website."
+          ]
+        },
+        {
+          "title": "Product information",
+          "body": [
+            "Bukky is presented as a SaaS platform for online booking, appointment management, clients, services, professionals, reminders, and daily operations.",
+            "Some features may evolve, enter beta, change in scope, or appear as upcoming improvements depending on product development."
+          ]
+        },
+        {
+          "title": "Pricing and plans",
+          "body": [
+            "Pricing information published on the website describes the current available plan and may be updated as new capabilities are released.",
+            "Any specific commercial condition must be confirmed during the demo, onboarding, or contracting process."
+          ]
+        },
+        {
+          "title": "Intellectual property",
+          "body": [
+            "The Bukky logo, name, design, copy, interfaces, and visual elements belong to their owners or licensors.",
+            "You may not copy, distribute, reuse, or exploit these elements without prior authorization, except where permitted by law."
+          ]
+        },
+        {
+          "title": "Availability and external links",
+          "body": [
+            "We work to keep the website available and updated, but we do not guarantee that it will always be free from interruptions, technical errors, or content changes.",
+            "The website may link to external channels such as WhatsApp, Instagram, or email services. Use of those channels is subject to their own terms."
+          ]
+        },
+        {
+          "title": "Responsibility",
+          "body": [
+            "The information on this website is informational and commercial. It does not replace specific contractual agreements or final legal documentation for a contracted service.",
+            "To the extent permitted by law, we are not responsible for damages arising from misuse of the website or decisions made without validating specific conditions."
+          ]
+        },
+        {
+          "title": "Changes and contact",
+          "body": [
+            "We may update these terms when the website, product, commercial processes, or applicable requirements change.",
+            "For any question about these terms, you can contact us at support@wegox.io or through the contact page."
+          ]
+        }
+      ],
+      "contactCta": {
+        "title": "Need clarification?",
+        "description": "If you have questions before requesting a demo, we can review your case and explain how Bukky fits.",
+        "label": "Contact us"
+      }
+    }
   },
   "finalCta": {
     "title": "Modernize how you run your business",
@@ -201,71 +753,21 @@
   },
   "footer": {
     "description": "Bukky is a modern platform for businesses that manage appointments, clients, and daily operations.",
-    "socialLinks": [
-      {
-        "label": "Instagram",
-        "href": "https://instagram.com",
-        "icon": "instagram"
-      },
-      {
-        "label": "GitHub",
-        "href": "https://github.com",
-        "icon": "github"
-      },
-      {
-        "label": "LinkedIn",
-        "href": "https://linkedin.com",
-        "icon": "linkedin"
-      }
-    ],
     "columns": [
       {
         "title": "Product",
         "links": [
           {
             "label": "Features",
-            "href": "/en#features"
+            "href": "/en/features"
           },
           {
-            "label": "Online booking",
-            "href": "/en#integrations"
-          },
-          {
-            "label": "Calendar management",
-            "href": "/en#customers"
-          },
-          {
-            "label": "Dashboard",
-            "href": "/en#pricing"
+            "label": "Pricing",
+            "href": "/en/pricing"
           },
           {
             "label": "Request demo",
-            "href": "/en#get-started"
-          }
-        ]
-      },
-      {
-        "title": "Solutions",
-        "links": [
-          {
-            "label": "Clinics",
-            "href": "/en#integrations"
-          },
-          {
-            "label": "Psychologists",
-            "href": "/en#integrations"
-          },
-          {
-            "label": "Physiotherapists",
-            "href": "/en#integrations"
-          },
-          {
-            "label": "Salons",
-            "href": "/en#integrations"
-          },
-          {
-            "label": "Wellness",
-            "href": "/en#integrations"
+            "href": "/en/contact"
           }
         ]
       },
@@ -274,17 +776,17 @@
         "links": [
           {
             "label": "WhatsApp",
-            "href": "https://wa.me/",
+            "href": "https://wa.me/34635693747",
             "icon": "whatsapp"
           },
           {
             "label": "Email",
-            "href": "mailto:hello@bukky.app",
+            "href": "/en/contact",
             "icon": "email"
           },
           {
             "label": "Instagram",
-            "href": "https://instagram.com",
+            "href": "https://www.instagram.com/bukky.wegox?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
             "icon": "instagram"
           }
         ]
@@ -293,11 +795,11 @@
     "legalLinks": [
       {
         "label": "Privacy",
-        "href": "/en#privacy"
+        "href": "/en/privacy"
       },
       {
         "label": "Terms",
-        "href": "/en#terms"
+        "href": "/en/terms"
       }
     ],
     "copyright": "\u00A9 2026 Bukky. All rights reserved.",

@@ -2,20 +2,28 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 
 import type { Locale } from "@/lib/i18n";
+import {
+  getHomeSectionRoute,
+  getLocalizedRoute,
+  getTranslatedMarketingPath,
+} from "@/lib/routes";
 
 type NavbarLabels = {
   features: string;
-  integrations: string;
   customers: string;
   pricing: string;
-  signIn: string;
+  contact: string;
   getStarted: string;
   langEs: string;
   langEn: string;
+  openMenu: string;
+  closeMenu: string;
+  switchToSpanish: string;
+  switchToEnglish: string;
 };
 
 type SiteNavbarProps = {
@@ -25,6 +33,7 @@ type SiteNavbarProps = {
 
 export function SiteNavbar({ lang, labels }: SiteNavbarProps) {
   const router = useRouter();
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeLang, setActiveLang] = useState<Locale>(lang);
   const [isSwitchingLang, setIsSwitchingLang] = useState(false);
@@ -42,9 +51,13 @@ export function SiteNavbar({ lang, labels }: SiteNavbarProps) {
   }, []);
 
   useEffect(() => {
-    setActiveLang(lang);
-    setIsSwitchingLang(false);
-    setIsMobileMenuOpen(false);
+    const frame = window.requestAnimationFrame(() => {
+      setActiveLang(lang);
+      setIsSwitchingLang(false);
+      setIsMobileMenuOpen(false);
+    });
+
+    return () => window.cancelAnimationFrame(frame);
   }, [lang]);
 
   const switchLanguage = (nextLang: Locale) => {
@@ -57,7 +70,7 @@ export function SiteNavbar({ lang, labels }: SiteNavbarProps) {
     setIsMobileMenuOpen(false);
 
     const hash = window.location.hash ?? "";
-    const targetPath = `/${nextLang}${hash}`;
+    const targetPath = `${getTranslatedMarketingPath(pathname, nextLang)}${hash}`;
     const navigate = () => router.push(targetPath);
 
     const maybeDocument = document as Document & {
@@ -76,16 +89,16 @@ export function SiteNavbar({ lang, labels }: SiteNavbarProps) {
 
   const navItems = useMemo(
     () => [
-      { href: `/${lang}#features`, label: labels.features },
-      { href: `/${lang}#integrations`, label: labels.integrations },
-      { href: `/${lang}#customers`, label: labels.customers },
-      { href: `/${lang}#pricing`, label: labels.pricing },
+      { href: getLocalizedRoute(lang, "features"), label: labels.features },
+      { href: getHomeSectionRoute(lang, "customers"), label: labels.customers },
+      { href: getLocalizedRoute(lang, "pricing"), label: labels.pricing },
+      { href: getLocalizedRoute(lang, "contact"), label: labels.contact },
     ],
     [
       lang,
+      labels.contact,
       labels.customers,
       labels.features,
-      labels.integrations,
       labels.pricing,
     ],
   );
@@ -96,7 +109,18 @@ export function SiteNavbar({ lang, labels }: SiteNavbarProps) {
         isScrolled ? "pt-2.5 sm:pt-3" : "pt-4 sm:pt-6"
       }`}
     >
-      <div className="mx-auto max-w-[1120px]">
+      <button
+        type="button"
+        aria-label={labels.closeMenu}
+        onClick={() => setIsMobileMenuOpen(false)}
+        className={`fixed inset-0 z-0 bg-[#050507]/78 backdrop-blur-[2px] transition-opacity duration-300 md:hidden ${
+          isMobileMenuOpen
+            ? "pointer-events-auto opacity-100"
+            : "pointer-events-none opacity-0"
+        }`}
+      />
+
+      <div className="relative z-10 mx-auto max-w-[1120px]">
         <nav
           className={`flex items-center justify-between rounded-xl border px-3.5 py-2.5 transition-all duration-500 sm:rounded-2xl sm:px-4 sm:py-3 md:px-6 ${
             isScrolled
@@ -139,7 +163,7 @@ export function SiteNavbar({ lang, labels }: SiteNavbarProps) {
               <button
                 type="button"
                 onClick={() => switchLanguage("es")}
-                aria-label="Cambiar idioma a español"
+                aria-label={labels.switchToSpanish}
                 className={`relative z-10 rounded-full py-1 text-[11px] font-semibold transition-colors ${
                   activeLang === "es"
                     ? "text-white"
@@ -151,7 +175,7 @@ export function SiteNavbar({ lang, labels }: SiteNavbarProps) {
               <button
                 type="button"
                 onClick={() => switchLanguage("en")}
-                aria-label="Switch language to English"
+                aria-label={labels.switchToEnglish}
                 className={`relative z-10 rounded-full py-1 text-[11px] font-semibold transition-colors ${
                   activeLang === "en"
                     ? "text-white"
@@ -163,14 +187,7 @@ export function SiteNavbar({ lang, labels }: SiteNavbarProps) {
             </div>
 
             <Link
-              href={`/${lang}#signin`}
-              className="hidden text-sm font-medium text-white/85 transition-colors hover:text-white md:inline-block"
-            >
-              {labels.signIn}
-            </Link>
-
-            <Link
-              href={`/${lang}#get-started`}
+              href={getLocalizedRoute(lang, "contact")}
               className="hidden rounded-xl bg-[#FFE633] px-4 py-2 text-sm font-semibold text-[#1E1E1E] transition-transform hover:-translate-y-0.5 sm:inline-flex md:px-5"
             >
               {labels.getStarted}
@@ -178,7 +195,7 @@ export function SiteNavbar({ lang, labels }: SiteNavbarProps) {
 
             <button
               type="button"
-              aria-label={isMobileMenuOpen ? "Cerrar menu" : "Abrir menu"}
+              aria-label={isMobileMenuOpen ? labels.closeMenu : labels.openMenu}
               onClick={() => setIsMobileMenuOpen((prev) => !prev)}
               className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-white/12 bg-white/[0.03] text-white/82 transition-colors hover:text-white md:hidden"
             >
@@ -216,37 +233,44 @@ export function SiteNavbar({ lang, labels }: SiteNavbarProps) {
         <div
           className={`overflow-hidden transition-[max-height,opacity,transform] duration-500 ease-out md:hidden ${
             isMobileMenuOpen
-              ? "pointer-events-auto mt-2 max-h-[360px] opacity-100"
-              : "pointer-events-none mt-0 max-h-0 opacity-0"
+              ? "pointer-events-auto mt-2 max-h-[430px] translate-y-0 opacity-100"
+              : "pointer-events-none mt-0 max-h-0 -translate-y-2 opacity-0"
           }`}
         >
-          <div className="rounded-2xl border border-white/10 bg-[rgba(10,10,16,0.9)] p-4 backdrop-blur-xl shadow-[0_14px_34px_rgba(0,0,0,0.34)]">
-            <ul className="space-y-1.5">
+          <div className="rounded-[20px] border border-white/12 bg-[#07070C] p-2.5 shadow-[0_22px_62px_rgba(0,0,0,0.56),inset_0_1px_0_rgba(255,255,255,0.06)]">
+            <ul className="grid gap-1">
               {navItems.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="block rounded-lg px-3 py-2 text-sm font-medium text-white/78 transition-colors hover:bg-white/[0.05] hover:text-white"
+                    className="group flex min-h-11 items-center justify-between rounded-xl px-3.5 py-2.5 text-sm font-medium text-white/76 transition-[background-color,color] hover:bg-white/[0.055] hover:text-white"
                   >
-                    {item.label}
+                    <span>{item.label}</span>
+                    <svg
+                      aria-hidden="true"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      className="h-4 w-4 text-white/28 transition-[transform,color] group-hover:translate-x-0.5 group-hover:text-[#FFE633]"
+                    >
+                      <path
+                        d="M4.167 10H15.833M15.833 10L10 4.167M15.833 10L10 15.833"
+                        stroke="currentColor"
+                        strokeWidth="1.7"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
                   </Link>
                 </li>
               ))}
             </ul>
 
-            <div className="mt-4 grid grid-cols-2 gap-2">
+            <div className="mt-2 border-t border-white/8 pt-2">
               <Link
-                href={`/${lang}#signin`}
+                href={getLocalizedRoute(lang, "contact")}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="inline-flex items-center justify-center rounded-xl border border-white/14 px-3 py-2 text-sm font-medium text-white/86"
-              >
-                {labels.signIn}
-              </Link>
-              <Link
-                href={`/${lang}#get-started`}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="inline-flex items-center justify-center rounded-xl bg-[#FFE633] px-3 py-2 text-sm font-semibold text-[#1E1E1E]"
+                className="final-cta-button final-cta-button-primary inline-flex min-h-12 w-full items-center justify-center rounded-xl bg-[#FFE633] px-4 text-sm font-semibold text-[#1E1E1E]"
               >
                 {labels.getStarted}
               </Link>
